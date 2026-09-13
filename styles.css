@@ -3,3 +3,6 @@
 /* Allow grid cards and decorative diagrams to shrink on narrow screens. */
 .project{min-width:0}.project-visual{min-width:0}.gateway-visual{gap:clamp(6px,2vw,16px)}.route-targets{min-width:0}.route-targets>span{width:clamp(135px,18vw,185px)}
 @media(max-width:380px){.project{padding:20px}.route-targets{padding-left:12px}.route-wire{width:20px}.mini-sidebar{padding-right:10px}.database-visual{gap:12px}.mini-table{grid-template-columns:45px 75px}.gateway-visual b{padding:12px}.header nav{gap:12px}.nav-contact{padding:7px}.header{gap:10px}}
+
+/* Expanded project stories retain the compact card overview. */
+.work-grid{align-items:start}.project-story{padding-top:20px}.project-story h4{font:500 17px/1.4 'Space Grotesk',sans-serif;margin:0 0 12px;color:var(--text)}.project-story p{font-size:14px;margin:0 0 18px}.project-story ul{padding-left:18px;margin:0 0 22px}.project-story li{font-size:14px;line-height:1.75;color:var(--muted);padding-left:5px;margin:13px 0}.project-story li::marker{color:var(--accent)}.project-story li strong{color:var(--text);font-weight:500}.project-story .story-outcome{border-left:2px solid var(--accent);padding:2px 0 2px 14px;margin-bottom:0}.story-outcome>strong{display:block;color:var(--accent);font:500 11px/1.5 var(--mono);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}

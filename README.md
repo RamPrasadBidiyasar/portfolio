@@ -24,4 +24,4 @@ Run `python3 -m http.server 8000` in this directory, then open http://localhost:
 
 Google Fonts supplies DM Sans and Space Grotesk; local system fonts are used if unavailable. No analytics or tracking is included. Motion respects the visitor’s reduced-motion preference. Project illustrations are conceptual, not live metrics or screenshots of internal systems.
 
-Content and career metrics are based on the provided resume. Local project documentation informed the Aerospike project summary. Internal application source, configurations, and credentials are not included.
+Content and career metrics are based on the provided resume. Repository implementation informed the CDN selection, reactive watch-history, and Aerospike workspace stories. Career impact metrics and the API gateway description come from the resume; the gateway source was not located in the supplied repository folder. Internal application source, configurations, and credentials are not included.
