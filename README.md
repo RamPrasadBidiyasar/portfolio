@@ -5,9 +5,13 @@ A responsive, static portfolio showcasing backend engineering, distributed syste
 ## GitHub Pages
 
 1. Open this repository’s **Settings → Pages**.
-2. Under **Build and deployment**, select **Deploy from a branch**.
-3. Select **main** and **/ (root)**, then **Save**.
-4. GitHub will provide the published URL, expected to be https://ramprasadbidiyasar.github.io/portfolio/.
+2. Under **Build and deployment → Source**, select **GitHub Actions** (one-time setup).
+3. Push to **main**. The **Deploy portfolio to GitHub Pages** workflow automatically publishes the update.
+4. Watch the run in **Actions**; its deployment links to the live site, expected to be https://ramprasadbidiyasar.github.io/portfolio/.
+
+You can also deploy manually from **Actions → Deploy portfolio to GitHub Pages → Run workflow** after the workflow has been pushed. If the initial push happened before enabling Pages, run it manually after setup.
+
+The workflow stages only the public HTML, CSS, JavaScript, and assets. It uses GitHub’s built-in token; no personal access token or deployment secret is needed. Deployment requires the workflow to be pushed successfully and Pages to be enabled.
 
 No build step, framework, backend, or API keys are required. All local asset paths are relative and work under the `/portfolio/` subpath.
 
