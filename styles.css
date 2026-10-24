@@ -147,7 +147,7 @@ h3 { font-size: 1.3rem; line-height: 1.3; letter-spacing: -0.02em; font-weight: 
 .result { margin-top: 18px; padding: 14px 16px; font-size: 0.97rem; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .tags li { padding: 4px 10px; font: 500 0.75rem/1.6 var(--mono); color: var(--muted); background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; }
-.diagram { position: sticky; top: 96px; padding: 18px; background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius); }
+.diagram { padding: 18px; background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius); }
 .diagram figcaption { margin-top: 12px; font-size: 0.8rem; color: var(--muted); }
 
 /* Diagram SVG styling follows the theme through CSS variables. */
@@ -158,6 +158,8 @@ h3 { font-size: 1.3rem; line-height: 1.3; letter-spacing: -0.02em; font-weight: 
 .diagram text.sub { fill: var(--muted); font: 400 10.5px var(--mono); }
 .diagram text.note { fill: var(--muted); font: 400 11px var(--mono); }
 .diagram text.note-end { text-anchor: end; }
+.diagram .badge circle { fill: var(--accent); stroke: none; }
+.diagram .badge text { fill: var(--accent-ink); font: 700 10px var(--sans); }
 .diagram .arrows path { fill: none; stroke: currentColor; stroke-width: 1.6; }
 .diagram .arrows path.dash { stroke-dasharray: 5 4; }
 .diagram .zone { fill: none; stroke: var(--line-strong); stroke-width: 1.4; stroke-dasharray: 5 4; }
@@ -241,3 +243,28 @@ h3 { font-size: 1.3rem; line-height: 1.3; letter-spacing: -0.02em; font-weight: 
   .section { padding-top: 28px; }
   a { text-decoration: none; }
 }
+
+/* ---------- Case study index, metric chips, flow steps ---------- */
+.case-index { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 28px; }
+.case-index a { display: grid; gap: 4px; height: 100%; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; text-decoration: none; transition: border-color 0.18s, transform 0.18s; }
+.case-index a:hover { border-color: var(--accent); transform: translateY(-2px); }
+.case-index .n { font: 500 0.75rem/1 var(--mono); color: var(--accent); }
+.case-index strong { font-size: 0.95rem; line-height: 1.3; }
+.case-index em { font-style: normal; font-size: 0.78rem; line-height: 1.45; color: var(--muted); }
+.metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.metrics li { padding: 6px 12px; font-size: 0.82rem; color: var(--muted); background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius: 999px; }
+.metrics b { color: var(--text); font-weight: 650; }
+.dtitle { margin: 0 0 12px; font: 500 0.75rem/1.4 var(--mono); letter-spacing: 0.04em; color: var(--muted); }
+.diagram .flow { counter-reset: step; display: grid; gap: 8px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.diagram .flow li { counter-increment: step; position: relative; padding-left: 30px; font-size: 0.85rem; line-height: 1.5; color: var(--muted); }
+.diagram .flow li::before { content: counter(step); position: absolute; left: 0; top: 0.1em; display: grid; place-items: center; width: 20px; height: 20px; font: 700 0.68rem/1 var(--sans); color: var(--accent-ink); background: var(--accent); border-radius: 50%; }
+.fail { margin-top: 14px; padding: 10px 12px; font-size: 0.83rem; line-height: 1.5; color: var(--muted); background: var(--surface); border: 1px dashed var(--line-strong); border-radius: 10px; }
+.fail strong { color: var(--text); }
+.legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-top: 12px; font: 400 0.72rem/1.4 var(--mono); color: var(--muted); }
+.sw { display: inline-block; width: 22px; height: 0; margin-right: 6px; vertical-align: middle; border-top: 2px solid var(--muted); }
+.sw-dash { border-top-style: dashed; }
+.sw-acc { height: 12px; border: 2px solid var(--accent); border-radius: 4px; width: 16px; }
+.badge-key { display: inline-grid; place-items: center; width: 16px; height: 16px; margin-right: 6px; font: 700 0.62rem/1 var(--sans); color: var(--accent-ink); background: var(--accent); border-radius: 50%; }
+@media (max-width: 960px) { .case-index { grid-template-columns: repeat(2, 1fr); } .case-index li:last-child { grid-column: 1 / -1; } }
+@media (max-width: 420px) { .case-index { grid-template-columns: 1fr; } }
+@media print { .case-index { display: none; } }
