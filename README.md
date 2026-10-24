@@ -21,11 +21,17 @@ Run `python3 -m http.server 8000` in this directory, then open http://localhost:
 
 ## Editing
 
-- `index.html`: portfolio content, experience, project stories, and links.
-- `styles.css`: responsive layout, colors, typography, and visual effects.
-- `script.js`: email copying and active navigation.
+- `index.html`: all content (hero, proof strip, five case studies with inline SVG diagrams, experience, skills, side projects, contact) plus metadata and JSON-LD.
+- `styles.css`: design tokens for light and dark themes, layout, components, print styles.
+- `script.js`: theme toggle (remembered in localStorage), copy-email, current-section highlight, scroll reveal.
+- `assets/fonts/`: self-hosted Inter and JetBrains Mono (variable, Latin subset, SIL Open Font License). No third-party font requests.
+- `assets/og-image.png`: 1200x630 link-preview image.
 - `assets/Ram-Prasad-Bidiyasar-Resume.pdf`: downloadable resume.
+- `sitemap.xml`: single-page sitemap.
 
-Google Fonts supplies DM Sans and Space Grotesk; local system fonts are used if unavailable. No analytics or tracking is included. Motion respects the visitor’s reduced-motion preference. Project illustrations are conceptual, not live metrics or screenshots of internal systems.
+No analytics, tracking or third-party scripts. Motion respects the visitor's reduced-motion setting. Diagrams are conceptual and generalized; they are not the production topology of any internal system, and no internal service names, hostnames, IDs or code are published.
 
-Content and career metrics are based on the provided resume. Repository implementation informed the CDN selection, reactive watch-history, and Aerospike workspace stories. Career impact metrics and the API gateway description come from the resume; the gateway source was not located in the supplied repository folder. Internal application source, configurations, and credentials are not included.
+## Content rules
+
+- Metrics come from the resume and annual review and should match the resume and LinkedIn exactly. Update all three together.
+- Check the employer's confidentiality policy before adding internal architecture detail.

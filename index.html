@@ -1,34 +1,425 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ram Prasad Bidiyasar — Backend Engineer</title>
-<meta name="description" content="Senior Software Engineer at Airtel. Building distributed systems, low-latency platforms, and reliable streaming experiences at scale.">
-<meta name="theme-color" content="#111310"><meta property="og:title" content="Ram Prasad Bidiyasar — Backend Engineer"><meta property="og:description" content="Senior Software Engineer at Airtel. Explore production impact, distributed systems architecture, and backend engineering projects."><meta property="og:type" content="website">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ram Prasad Bidiyasar | Senior Software Engineer, Backend and Distributed Systems</title>
+<meta name="description" content="Ram Prasad Bidiyasar is a Senior Software Engineer at Airtel Digital building the Xstream backend: Kafka event pipelines, ScyllaDB and Aerospike data models, multi-CDN playback and resilient APIs for 10M+ users.">
+<link rel="canonical" href="https://ramprasadbidiyasar.github.io/portfolio/">
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ram Prasad Bidiyasar">
+<meta property="og:title" content="Ram Prasad Bidiyasar | Senior Software Engineer, Backend">
+<meta property="og:description" content="Kafka pipelines, ScyllaDB and Aerospike data models, multi-CDN playback and resilient APIs behind Airtel Xstream. Case studies with diagrams and measured results.">
+<meta property="og:url" content="https://ramprasadbidiyasar.github.io/portfolio/">
+<meta property="og:image" content="https://ramprasadbidiyasar.github.io/portfolio/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ram Prasad Bidiyasar, Senior Software Engineer, backend and distributed systems">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+
+<script>
+/* Apply the saved theme before first paint to avoid a flash. */
+try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+<script src="script.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ram Prasad Bidiyasar",
+  "jobTitle": "Senior Software Engineer",
+  "url": "https://ramprasadbidiyasar.github.io/portfolio/",
+  "email": "mailto:ramprasad.mnit@gmail.com",
+  "worksFor": { "@type": "Organization", "name": "Airtel Digital" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Malaviya National Institute of Technology Jaipur" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Gurugram", "addressCountry": "IN" },
+  "knowsAbout": ["Distributed systems", "Apache Kafka", "ScyllaDB", "Aerospike", "Java", "Spring Boot", "Event-driven architecture", "Backend engineering"],
+  "sameAs": [
+    "https://www.linkedin.com/in/ram-prasad-bidiyasar",
+    "https://github.com/RamPrasadBidiyasar",
+    "https://leetcode.com/u/Ram_Prasad_Bidiyasar/"
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="header"><a class="brand" href="#" aria-label="Ram Prasad home">rp<span>_</span></a><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#about">About</a></nav><a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a></header>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Ram Prasad Bidiyasar, back to top">RP<span aria-hidden="true">.</span></a>
+    <nav aria-label="Main">
+      <a href="#work">Case studies</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="bar-actions">
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch color theme" aria-pressed="false">
+        <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></g></svg>
+      </button>
+      <a class="btn btn-small" href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Resume</a>
+    </div>
+  </div>
+</header>
+
 <main id="main">
-<section class="hero" aria-labelledby="hero-title">
-<div class="hero-copy"><p class="eyebrow"><span class="small-line"></span> RAM PRASAD BIDIYASAR</p><p class="role-label">SENIOR SOFTWARE ENGINEER · BACKEND</p><h1 id="hero-title">Backend systems.<br><em>Real-world scale.</em></h1><p class="hero-intro">I’m Ram. I build fast, resilient services<br>that millions of people rely on.</p><p class="hero-description">At <strong>Airtel</strong>, I own distributed systems from architecture to production: Java, Spring Boot, Kafka, and high-scale data platforms.</p><div class="hero-actions"><a class="button primary" href="#work">View engineering work <span aria-hidden="true">↘</span></a><a class="text-link" href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Download resume <span aria-hidden="true">↓</span></a></div><div class="hero-meta"><span>Gurugram, India</span><span>Java · Distributed systems · Cloud</span></div></div>
-<div class="system-art" role="img" aria-label="Illustrative distributed system: requests flow through a gateway to interconnected services and storage."><div class="art-top"><span>SYSTEM / 001</span><span>DESIGNED FOR SCALE</span></div><div class="orbital orbit-one"></div><div class="orbital orbit-two"></div><div class="orbital orbit-three"></div><div class="connection line-one"></div><div class="connection line-two"></div><div class="connection line-three"></div><div class="connection line-four"></div><div class="system-node node-top"><span>01</span> REQUEST</div><div class="system-node node-left"><span>02</span> GATEWAY</div><div class="system-core"><span class="core-symbol">{<i>↗</i>}</span><span>BUILD. SCALE. REPEAT.</span></div><div class="system-node node-right"><span>03</span> SERVICES</div><div class="system-node node-bottom"><span>04</span> DATA</div><span class="particle p1"></span><span class="particle p2"></span><span class="particle p3"></span><div class="art-bottom"><span>EVENT-DRIVEN BY DESIGN</span><span>∞</span></div></div>
+<!-- HERO -->
+<section class="hero wrap" id="top" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="status"><span class="dot" aria-hidden="true"></span> Open to backend and platform engineering roles</p>
+    <h1 id="hero-title">Ram Prasad Bidiyasar</h1>
+    <p class="role">Senior Software Engineer, backend and distributed systems</p>
+    <p class="lede">I build the backend behind Airtel Xstream: Kafka event pipelines, ScyllaDB and Aerospike data models, multi-CDN playback, and APIs that stay up when their dependencies do not.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#work">Read the case studies</a>
+      <a class="btn" href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Download resume</a>
+      <a class="btn btn-ghost" href="mailto:ramprasad.mnit@gmail.com">Email me</a>
+    </div>
+    <ul class="links" aria-label="Profiles">
+      <li><a href="https://www.linkedin.com/in/ram-prasad-bidiyasar" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="https://github.com/RamPrasadBidiyasar" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://leetcode.com/u/Ram_Prasad_Bidiyasar/" rel="noopener noreferrer">LeetCode</a></li>
+    </ul>
+  </div>
+  <section class="glance" aria-labelledby="glance-title">
+    <h2 class="label" id="glance-title">At a glance</h2>
+    <dl>
+      <div><dt>Now</dt><dd>Senior Software Engineer, Airtel Digital (Xstream backend: OTT and IPTV)</dd></div>
+      <div><dt>Since</dt><dd>Oct 2023. Promoted to Senior in Jul 2025</dd></div>
+      <div><dt>Core stack</dt><dd>Java, Spring Boot and WebFlux, Kafka, ScyllaDB, Aerospike, Redis, GCP</dd></div>
+      <div><dt>Strengths</dt><dd>Ordering and consistency, failure isolation, performance under peak load</dd></div>
+      <div><dt>Based in</dt><dd>Gurugram, India</dd></div>
+    </dl>
+  </section>
 </section>
-<section class="impact" aria-label="Career impact"><div><strong>10M<span>+</span></strong><p>Active users on IPTV playback</p></div><div><strong>1.5B<span>+</span></strong><p>Daily campaign messages</p></div><div><strong>75<span>%</span></strong><p>Lower watch-history P99 latency</p></div><div><strong>20<span>+</span></strong><p>Microservices migrated to GCP</p></div></section>
-<section id="work" class="section"><div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h2>Built for the real world.</h2></div><p>Production impact, architectural decisions,<br>and the systems behind them.</p></div>
-<div class="work-grid">
-<article class="project featured"><div class="project-top"><span>PRODUCTION SYSTEMS / AIRTEL</span><span>01</span></div><div class="project-visual cdn-visual" aria-hidden="true"><span class="route-source">PLAY</span><span class="route-wire"></span><div class="route-targets"><span>CDN 01 <b>PRIMARY</b></span><span>CDN 02 <b>FALLBACK</b></span><span>CDN 03 <b>READY</b></span></div></div><h3>Multi-CDN<br>playback platform.</h3><p>Multi-CDN routing and failover for IPTV playback, balancing geography, priority, weights, and CDN health.</p><div class="project-result"><strong>1% → 0.07%</strong><span>buffering reduced</span></div><div class="tags"><span>Java</span><span>Spring Boot</span><span>MongoDB</span></div><details><summary>Architecture &amp; implementation <span aria-hidden="true">+</span></summary>
-<div class="project-story"><h4>Multi-CDN playback routing</h4><p>Keep playback resilient when CDN availability and routing conditions change.</p><ul><li><strong>Rule-driven selection.</strong> Evaluate prioritized routing rules against playback context and available CDN candidates.</li><li><strong>Graceful fallback.</strong> Fall back to stream options ordered by default weight when rules return no candidates or selection fails.</li><li><strong>Operational control.</strong> Support a priority CDN override and record fallback decisions for observability.</li></ul><p class="story-outcome"><strong>Result</strong>Playback serving 10M+ active users; buffering reduced from 1% to 0.07%.</p></div></details></article>
-<article class="project"><div class="project-top"><span>REACTIVE ARCHITECTURE / AIRTEL</span><span>02</span></div><div class="project-visual latency-visual" aria-hidden="true"><div><span>BEFORE</span><i></i><b>100</b></div><div><span>AFTER</span><i></i><b>25</b></div><small>RELATIVE P99 LATENCY</small></div><h3>Reactive<br>watch-history service.</h3><p>A reactive watch-history pipeline built for high-scale user activity and consistently low latency.</p><div class="project-result"><strong>4×</strong><span>per-instance throughput</span></div><div class="tags"><span>WebFlux</span><span>ScyllaDB</span><span>Reactive Java</span></div><details><summary>Architecture &amp; implementation <span aria-hidden="true">+</span></summary>
-<div class="project-story"><h4>Reactive watch-history platform</h4><p>Serve high-volume user activity without letting a slow dependency hold up the whole response.</p><ul><li><strong>Reactive data access.</strong> Use Reactor Flux and reactive ScyllaDB repositories for history queries scoped to a user and profile.</li><li><strong>Parallel composition.</strong> The query layer combines requested Continue Watching, history, favourites, and reactions sections with independent loaders.</li><li><strong>Failure isolation.</strong> Per-section timeouts and empty-page fallback allow other sections to complete when one read fails.</li></ul><p class="story-outcome"><strong>Result</strong>Watch-history re-architecture reduced P99 latency by 75% and improved per-instance throughput by approximately 4×.</p></div></details></article>
-<article class="project"><div class="project-top"><span>DEVELOPER TOOLING</span><span>03</span></div><div class="project-visual database-visual" aria-hidden="true"><div class="mini-sidebar">CLUSTER<br><span>↳ namespace</span><br><span>↳ records</span></div><div class="mini-table"><span>KEY</span><span>VALUE</span><i></i><i></i><i></i><i></i><i></i><i></i></div></div><h3>Aerospike<br>cluster workspace.</h3><p>An Aerospike management workspace for browsing data, editing records, and understanding cluster health.</p><div class="tags"><span>Java 21</span><span>Spring Boot</span><span>React</span></div><details><summary>Architecture &amp; implementation <span aria-hidden="true">+</span></summary>
-<div class="project-story"><h4>Aerospike cluster workspace</h4><p>Make database browsing and operational diagnostics accessible through one interface.</p><ul><li><strong>Browse and edit.</strong> Navigate namespaces and sets, search records, and create or edit record data through a React workspace and Java APIs.</li><li><strong>Inspect cluster health.</strong> Surface cluster overview, secondary indexes, UDF modules, and sampled bin statistics for diagnostics.</li><li><strong>Track long-running work.</strong> Run key-pattern operations as background jobs with status polling and cancellation controls.</li></ul><p class="story-outcome"><strong>Result</strong>A Java 21 / Spring Boot backend paired with React and Vite, covering data operations and cluster diagnostics.</p></div></details></article>
-<article class="project"><div class="project-top"><span>PLATFORM ENGINEERING</span><span>04</span></div><div class="project-visual gateway-visual" aria-hidden="true"><span>REQUEST</span><i>→</i><b>JWT<br><small>GATEWAY</small></b><i>→</i><span>SERVICE</span></div><h3>Reactive<br>API gateway.</h3><p>A reactive API gateway with dynamic routes, authentication, and traceable requests.</p><div class="tags"><span>Spring Cloud</span><span>MongoDB</span><span>Docker</span></div><details><summary>Architecture &amp; implementation <span aria-hidden="true">+</span></summary>
-<div class="project-story"><h4>Reactive API gateway</h4><p>Centralize routing, access checks, and request tracing for backend services.</p><ul><li><strong>Dynamic routing.</strong> Manage routing configuration through MongoDB-backed routes and administration APIs.</li><li><strong>Access control.</strong> Apply JWT authentication and authorization alongside custom request filters.</li><li><strong>Traceable delivery.</strong> Use correlation IDs to connect request activity and Docker packaging for deployment.</li></ul><p class="story-outcome"><strong>Result</strong>A Java 21 / Spring Cloud Gateway platform combining route management, JWT access control, and request tracing.</p></div></details></article>
-</div></section>
-<section id="experience" class="section experience"><div class="section-heading"><div><p class="eyebrow">02 / THE JOURNEY</p><h2>Ownership, end to end.</h2></div><p>Architecture. Delivery. Reliability.<br>And everything in between.</p></div><div class="timeline"><article class="job"><div class="job-date">JUN 2025 — PRESENT<span class="company">Airtel <small>Gurugram, India</small></span></div><div class="job-content"><h3>Senior Software Engineer</h3><p>Owning backend architecture and production reliability across Xstream playback, content, ingestion, sync, and user services.</p><ul><li>Scaled personalized page generation from <strong>30 to 100 TPS</strong>, cutting latency by nearly 30% with Java 21, gRPC, and parallel asynchronous calls.</li><li>Designed a distributed IPTV session platform with opaque tokens and reusable SDK-based validation.</li><li>Led production ownership across <strong>20+ campaign microservices</strong> processing 1.5B+ messages daily, spanning observability, capacity planning, and incident response.</li></ul></div></article><article class="job"><div class="job-date">OCT 2023 — JUN 2025<span class="company">Airtel <small>Gurugram, India</small></span></div><div class="job-content"><h3>Software Engineer</h3><p>Building the foundations for faster sync, seamless partner experiences, and resilient cloud infrastructure.</p><ul><li>Redesigned Continue Watching synchronization with distributed caching and asynchronous persistence, reducing sync latency by <strong>nearly 70%</strong>.</li><li>Built event-driven episode promotion and delivered Amazon Prime playback and Hotstar content integrations.</li><li>Contributed to the <strong>AWS → GCP migration</strong> of 20+ production microservices while preserving production continuity.</li></ul></div></article></div></section>
-<section id="about" class="section about"><div><p class="eyebrow">03 / A LITTLE ABOUT ME</p><h2>Curious by nature.<br>Backend by craft.</h2><p class="about-copy">I’m Ram, a backend engineer who enjoys making complex systems feel simple. My work sits at the intersection of distributed architecture, performance, and production reliability.</p><p class="about-copy">From the first design decision to the incident that tests it, I care about how systems behave in the real world.</p><div class="education"><span class="education-icon" aria-hidden="true">↗</span><div><strong>Malaviya National Institute of Technology, Jaipur</strong><p>B.Tech. · Electronics & Communication Engineering</p><span>2019 — 2023 <i> / </i> CGPA 8.16</span></div></div></div><div class="toolkit"><p class="eyebrow">MY ENGINEERING TOOLKIT</p><div><h3>Languages & backend</h3><p>Java 8–21 · SQL · Spring Boot · WebFlux · Spring Cloud · REST · gRPC</p></div><div><h3>Data & messaging</h3><p>Kafka · ScyllaDB · Aerospike · Redis · MongoDB · PostgreSQL</p></div><div><h3>Cloud & operations</h3><p>GCP · AWS · Docker · CI/CD · Prometheus · Grafana</p></div><div><h3>Systems thinking</h3><p>Event-driven architecture · Fault tolerance · Idempotency · Rate limiting · High availability</p></div></div></section>
-<section id="contact" class="contact"><p class="eyebrow">04 / WHAT’S NEXT?</p><h2>Hiring for backend?<br><em>Let’s talk.</em></h2><p class="contact-intro">I’m interested in backend and platform engineering roles where reliability, distributed systems, and performance matter. Get in touch to discuss your team.</p><a class="text-link contact-resume" href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Download my resume <span aria-hidden="true">↓</span></a><div class="contact-bottom"><a href="mailto:ramprasad.mnit@gmail.com" class="email">ramprasad.mnit@gmail.com <span aria-hidden="true">↗</span></a><button id="copy-email" type="button">Copy email <span aria-hidden="true">⧉</span></button></div><p id="copy-status" role="status" aria-live="polite"></p></section>
-</main><footer><a class="brand" href="#" aria-label="Back to top">rp<span>_</span></a><p>© <span id="year">2026</span> Ram Prasad Bidiyasar</p><div><a href="https://github.com/RamPrasadBidiyasar" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" target="_blank" rel="noopener">Resume ↗</a><a href="#">Back to top ↑</a></div></footer>
-</body></html>
+
+<!-- PROOF STRIP -->
+<section class="proof wrap" aria-label="Results at a glance">
+  <ul class="proof-grid">
+    <li><strong>10M+</strong><span>active users on IPTV playback routed by the multi-CDN engine I built</span></li>
+    <li><strong>80–90K/s</strong><span>events absorbed at live-match peaks by the rebuilt event service</span></li>
+    <li><strong>−75%</strong><span>p99 latency on watch-history reads, with about 4x per-instance throughput</span></li>
+    <li><strong>1% → 0.07%</strong><span>buffering after multi-CDN routing and failover</span></li>
+  </ul>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="work" class="section wrap" aria-labelledby="work-title">
+  <div class="section-head">
+    <p class="label">Case studies</p>
+    <h2 id="work-title">Five systems, what I decided and why</h2>
+    <p class="muted">Each one: the problem, the design choices and their trade-offs, and the measured result. Diagrams are conceptual and generalized; they are not the production topology.</p>
+  </div>
+
+  <!-- 1 -->
+  <article class="case" id="case-watch">
+    <div class="case-text">
+      <p class="label">01 · Continue Watching and Watch Info v2</p>
+      <h3>Per-user ordering for watch progress, and a fast read path</h3>
+      <p class="problem"><strong>Problem.</strong> Continue-watching and history serve both the Xstream app and the IPTV app at high volume. One user can watch on several devices and write at the same time, so ordering and consistency mattered, and reads had to stay fast.</p>
+      <ul class="decisions">
+        <li><strong>Serialize writes with Kafka.</strong> Watch events are keyed by user ID, so one user's concurrent and multi-device writes arrive in order. A consumer writes them to ScyllaDB. The trade-off is asynchronous persistence, covered by a local fallback.</li>
+        <li><strong>Separate data models per product.</strong> Xstream and IPTV have their own continue-watching storage, with table-level compaction tuned for it, and a dual-write migration from the old tables.</li>
+        <li><strong>Cache by bucket.</strong> Redis and Aerospike caches are scoped per bucket, with bucket-wise diff-sync merge and LRU eviction in the app.</li>
+        <li><strong>Reactive reads.</strong> Watch Info v2 serves continue-watching, history and favourites through one contract on Spring WebFlux and reactive ScyllaDB, with independent loaders so one slow section does not hold up the others. Later extended to live TV and microdrama.</li>
+      </ul>
+      <p class="result"><strong>Result.</strong> Sync latency down by nearly 70%. Watch-history p99 down 75%, with about 4x throughput per instance.</p>
+      <ul class="tags" aria-label="Technologies"><li>Kafka</li><li>ScyllaDB</li><li>Redis</li><li>Aerospike</li><li>Spring WebFlux</li></ul>
+    </div>
+    <figure class="diagram">
+      <svg viewBox="0 0 400 290" role="img" aria-labelledby="d1t d1d">
+        <title id="d1t">Continue Watching write and read paths</title>
+        <desc id="d1d">Writes go from client apps through a sync API into Kafka, keyed by user ID, then a writer stores them in ScyllaDB. Reads go from ScyllaDB through a bucket cache to the Watch Info v2 API and back to the clients.</desc>
+        <defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+        <g class="arrows" marker-end="url(#a1)">
+          <path d="M112 34H144"/><path d="M256 34H288"/><path d="M344 58V120"/><path d="M288 144H256"/>
+          <path d="M200 168V230"/><path d="M144 254H112"/><path d="M56 230V58"/>
+        </g>
+        <g class="node"><rect x="0" y="10" width="112" height="48" rx="8"/><text x="56" y="30">Client apps</text><text x="56" y="46" class="sub">Xstream · IPTV</text></g>
+        <g class="node"><rect x="144" y="10" width="112" height="48" rx="8"/><text x="200" y="38">Sync API</text></g>
+        <g class="node accent"><rect x="288" y="10" width="112" height="48" rx="8"/><text x="344" y="30">Kafka</text><text x="344" y="46" class="sub">key = user ID</text></g>
+        <g class="node"><rect x="288" y="120" width="112" height="48" rx="8"/><text x="344" y="148">Writer</text></g>
+        <g class="node accent"><rect x="144" y="120" width="112" height="48" rx="8"/><text x="200" y="140">ScyllaDB</text><text x="200" y="156" class="sub">per-product</text></g>
+        <g class="node"><rect x="144" y="230" width="112" height="48" rx="8"/><text x="200" y="250">Bucket cache</text><text x="200" y="266" class="sub">Redis/Aerospike</text></g>
+        <g class="node"><rect x="0" y="230" width="112" height="48" rx="8"/><text x="56" y="250">Watch Info v2</text><text x="56" y="266" class="sub">reactive reads</text></g>
+        <text x="334" y="98" class="note note-end">ordered per user</text>
+      </svg>
+      <figcaption>Conceptual diagram: ordered writes through Kafka, cached reactive reads.</figcaption>
+    </figure>
+  </article>
+
+  <!-- 2 -->
+  <article class="case flip" id="case-cdn">
+    <div class="case-text">
+      <p class="label">02 · Multi-CDN routing and failover</p>
+      <h3>Choosing the right CDN for every playback request</h3>
+      <p class="problem"><strong>Problem.</strong> IPTV playback needed each request sent to the best CDN as geography, load and CDN health change, and needed to keep playing when a CDN degrades.</p>
+      <ul class="decisions">
+        <li><strong>Rules as configuration.</strong> Routing rules are stored in MongoDB and evaluated per request over geography, user, channel, priority, weights and CDN health. The trade-off is a rule engine that needs its own testing and change history.</li>
+        <li><strong>Filter, then sort.</strong> A filter engine removes ineligible CDNs, a sort engine orders the rest, and a rule-evaluation engine applies priorities. Rule storage, access and sync mechanisms keep the rules available to the playback service.</li>
+        <li><strong>Always have an answer.</strong> If no rule matches or selection fails, the request falls back to stream options ordered by default weight. A priority-CDN override gives operators manual control, and fallback decisions are recorded.</li>
+      </ul>
+      <p class="result"><strong>Result.</strong> Playback for 10M+ active users, with buffering reduced from 1% to 0.07%.</p>
+      <ul class="tags" aria-label="Technologies"><li>Java</li><li>Spring Boot</li><li>MongoDB</li><li>SpEL rules</li></ul>
+    </div>
+    <figure class="diagram">
+      <svg viewBox="0 0 400 290" role="img" aria-labelledby="d2t d2d">
+        <title id="d2t">Multi-CDN request routing</title>
+        <desc id="d2d">A playback request goes to a rule engine configured from a rule store. The engine picks among three CDNs ranked primary, fallback and ready, and falls back to default weights when no rule matches.</desc>
+        <defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+        <g class="arrows" marker-end="url(#a2)">
+          <path d="M112 124H144"/><path d="M200 58V100"/><path d="M200 148V190" class="dash"/>
+          <path d="M256 116L288 38"/><path d="M256 124H288"/><path d="M256 132L288 214"/>
+        </g>
+        <g class="node"><rect x="0" y="100" width="112" height="48" rx="8"/><text x="56" y="120">Playback</text><text x="56" y="136" class="sub">request</text></g>
+        <g class="node"><rect x="144" y="10" width="112" height="48" rx="8"/><text x="200" y="30">Rule store</text><text x="200" y="46" class="sub">MongoDB</text></g>
+        <g class="node accent"><rect x="144" y="100" width="112" height="48" rx="8"/><text x="200" y="120">Rule engine</text><text x="200" y="136" class="sub">filter · sort</text></g>
+        <g class="node"><rect x="144" y="190" width="112" height="48" rx="8"/><text x="200" y="210">Default order</text><text x="200" y="226" class="sub">no match / error</text></g>
+        <g class="node"><rect x="288" y="14" width="112" height="48" rx="8"/><text x="344" y="34">CDN A</text><text x="344" y="50" class="sub">primary</text></g>
+        <g class="node"><rect x="288" y="100" width="112" height="48" rx="8"/><text x="344" y="120">CDN B</text><text x="344" y="136" class="sub">fallback</text></g>
+        <g class="node"><rect x="288" y="190" width="112" height="48" rx="8"/><text x="344" y="210">CDN C</text><text x="344" y="226" class="sub">ready</text></g>
+        <text x="200" y="272" class="note">health and geography decide the order</text>
+      </svg>
+      <figcaption>Conceptual diagram: per-request CDN selection with a guaranteed fallback.</figcaption>
+    </figure>
+  </article>
+
+  <!-- 3 -->
+  <article class="case" id="case-events">
+    <div class="case-text">
+      <p class="label">03 · Event ingestion at live-match scale</p>
+      <h3>An event service that survives peaks and a Kafka outage</h3>
+      <p class="problem"><strong>Problem.</strong> Playback events arrive in bursts during big live matches, about 80–90K per second. A spike or fault in one product should not take down the other, and events should not be lost if Kafka is unavailable.</p>
+      <ul class="decisions">
+        <li><strong>Shorter request path.</strong> The service, rebuilt on Java 25, sends events straight to Kafka, with the extra queue in front of the producer removed and less logging on the request path. One pod went from about 400 to about 2,500 requests per second, roughly 6x.</li>
+        <li><strong>Isolate the products.</strong> Xstream and IPTV each have their own event service, Kafka cluster and deployment, so a spike or fault stays inside one product and each scales independently.</li>
+        <li><strong>Tier the topics.</strong> Critical events and routine watch events use different topics with different retention and replication.</li>
+        <li><strong>Buffer when Kafka is down.</strong> Events are still accepted, held through Cloud Run and Pub/Sub, and replayed into Kafka by Kafka Connect on recovery. The trade-off, documented for the team: the buffered path cannot separate critical from routine events.</li>
+      </ul>
+      <p class="result"><strong>Result.</strong> About 6x per-pod throughput, peak load absorbed without cross-product impact, and no event loss during Kafka outages.</p>
+      <ul class="tags" aria-label="Technologies"><li>Java 25</li><li>Kafka</li><li>Kafka Connect</li><li>Pub/Sub</li><li>Cloud Run</li></ul>
+    </div>
+    <figure class="diagram">
+      <svg viewBox="0 0 400 290" role="img" aria-labelledby="d3t d3d">
+        <title id="d3t">Event ingestion with buffering during a Kafka outage</title>
+        <desc id="d3d">Client events flow to an event service and then into Kafka with separate critical and routine topics. If Kafka is unavailable, events are held in a Pub/Sub buffer and replayed into Kafka by Kafka Connect. Xstream and IPTV run as separate stacks.</desc>
+        <defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+        <g class="arrows" marker-end="url(#a3)">
+          <path d="M112 34H144"/><path d="M256 34H288"/><path d="M200 58V120" class="dash"/>
+          <path d="M256 144H288" class="dash"/><path d="M344 120V58" class="dash"/>
+        </g>
+        <g class="node"><rect x="0" y="10" width="112" height="48" rx="8"/><text x="56" y="30">Client events</text><text x="56" y="46" class="sub">80–90K/s peak</text></g>
+        <g class="node accent"><rect x="144" y="10" width="112" height="48" rx="8"/><text x="200" y="30">Event service</text><text x="200" y="46" class="sub">Java 25</text></g>
+        <g class="node accent"><rect x="288" y="10" width="112" height="48" rx="8"/><text x="344" y="30">Kafka</text><text x="344" y="46" class="sub">critical/routine</text></g>
+        <g class="node"><rect x="144" y="120" width="112" height="48" rx="8"/><text x="200" y="140">Pub/Sub buffer</text><text x="200" y="156" class="sub">Kafka is down</text></g>
+        <g class="node"><rect x="288" y="120" width="112" height="48" rx="8"/><text x="344" y="140">Kafka Connect</text><text x="344" y="156" class="sub">replay</text></g>
+        <rect x="0" y="208" width="190" height="64" rx="8" class="zone"/><text x="95" y="236">Xstream stack</text><text x="95" y="254" class="sub">own service · Kafka · deploy</text>
+        <rect x="210" y="208" width="190" height="64" rx="8" class="zone"/><text x="305" y="236">IPTV stack</text><text x="305" y="254" class="sub">own service · Kafka · deploy</text>
+      </svg>
+      <figcaption>Conceptual diagram: dashed paths are used only while Kafka is unavailable.</figcaption>
+    </figure>
+  </article>
+
+  <!-- 4 -->
+  <article class="case flip" id="case-session">
+    <div class="case-text">
+      <p class="label">04 · IPTV session service</p>
+      <h3>One device at a time, without a single point of failure</h3>
+      <p class="problem"><strong>Problem.</strong> IPTV needed to limit how many devices can watch at once, and to keep playback tied to the device that logged in, while traffic grew and a zone could fail.</p>
+      <ul class="decisions">
+        <li><strong>Sessions tied to a device.</strong> A login creates a session. The token is opaque and bound to that device, and playback checks it while the user watches.</li>
+        <li><strong>An atomic limit.</strong> The concurrent-device limit is configurable and enforced atomically, so two logins at the same moment cannot both succeed.</li>
+        <li><strong>Multi-zone storage.</strong> Sessions live in multi-zone Aerospike, so the service keeps running if one zone has a problem. Login still works when the set-top-box details call fails.</li>
+        <li><strong>Reusable validation.</strong> A shared client SDK lets the playback and SMS services validate tokens the same way, so there is one place to change the rules.</li>
+      </ul>
+      <p class="result"><strong>Result.</strong> IPTV login and device-level playback are handled by one service that scales with traffic and tolerates a zone failure.</p>
+      <ul class="tags" aria-label="Technologies"><li>Java 21</li><li>Spring Boot</li><li>Aerospike</li><li>SDK design</li></ul>
+    </div>
+    <figure class="diagram">
+      <svg viewBox="0 0 400 290" role="img" aria-labelledby="d4t d4d">
+        <title id="d4t">IPTV session service</title>
+        <desc id="d4d">A login request goes to the session service, which stores sessions in Aerospike spread across three zones. Playback and SMS services validate tokens via shared SDK.</desc>
+        <defs><marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+        <g class="arrows" marker-end="url(#a4)">
+          <path d="M112 34H144"/><path d="M256 34H288"/><path d="M200 182V58"/>
+        </g>
+        <g class="node"><rect x="0" y="10" width="112" height="48" rx="8"/><text x="56" y="30">Login</text><text x="56" y="46" class="sub">set-top box</text></g>
+        <g class="node accent"><rect x="144" y="10" width="112" height="48" rx="8"/><text x="200" y="30">Session service</text><text x="200" y="46" class="sub">atomic limit</text></g>
+        <g class="node accent"><rect x="288" y="10" width="112" height="48" rx="8"/><text x="344" y="30">Aerospike</text><text x="344" y="46" class="sub">multi-zone</text></g>
+        <g class="arrows"><path d="M344 58V86"/></g>
+        <g class="node"><rect x="288" y="86" width="34" height="34" rx="6"/><text x="305" y="107" class="sub">A</text></g>
+        <g class="node"><rect x="333" y="86" width="34" height="34" rx="6"/><text x="350" y="107" class="sub">B</text></g>
+        <g class="node"><rect x="378" y="86" width="22" height="34" rx="6"/><text x="389" y="107" class="sub">C</text></g>
+        <text x="344" y="144" class="note">replicated across 3 zones</text>
+        <g class="node"><rect x="0" y="182" width="256" height="56" rx="8"/><text x="128" y="204">Playback and SMS services</text><text x="128" y="222" class="sub">validate tokens via shared SDK</text></g>
+        <text x="200" y="272" class="note">same token rules everywhere</text>
+      </svg>
+      <figcaption>Conceptual diagram: one source of truth for sessions, one SDK to check them.</figcaption>
+    </figure>
+  </article>
+
+  <!-- 5 -->
+  <article class="case" id="case-resilience">
+    <div class="case-text">
+      <p class="label">05 · Resilient Home and layout service</p>
+      <h3>Keep the home screen open when something behind it breaks</h3>
+      <p class="problem"><strong>Problem.</strong> The home and layout service depends on content sources and a CDN. If one is slow or down, the home page should still open, and a slow downstream call should not exhaust the service's threads.</p>
+      <ul class="decisions">
+        <li><strong>Fallback with a kill switch.</strong> When the primary content fetch fails, the service retries against a fallback source. A kill switch turns that off, and a response header says when fallback content was served, so operators can see it.</li>
+        <li><strong>CDN failover at the gateway.</strong> If the layout CDN fails, the gateway serves static layouts instead of an error. The trade-off is that static layouts are less personalized, which is acceptable for a degraded mode.</li>
+        <li><strong>Protect the thread pool.</strong> Fixed thread-pool exhaustion under slow downstream calls, so a slow dependency cannot take down the whole service.</li>
+        <li><strong>Faster generation.</strong> Personalized page generation went from 30 to 100 TPS, with about 30% lower latency, using Java 21, gRPC, thread-pool tuning and parallel asynchronous calls.</li>
+      </ul>
+      <p class="result"><strong>Result.</strong> Home and Rush stay available during dependency failures, and page generation scales to roughly 3x the previous throughput.</p>
+      <ul class="tags" aria-label="Technologies"><li>Java 21</li><li>gRPC</li><li>Spring Boot</li><li>Envoy</li></ul>
+    </div>
+    <figure class="diagram">
+      <svg viewBox="0 0 400 290" role="img" aria-labelledby="d5t d5d">
+        <title id="d5t">Layout service degradation paths</title>
+        <desc id="d5d">A client request passes through the gateway to the layout service, which reads from the primary content source. If that fails, a fallback source is used, and if the CDN fails the gateway serves static layouts.</desc>
+        <defs><marker id="a5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+        <g class="arrows" marker-end="url(#a5)">
+          <path d="M112 34H144"/><path d="M256 34H288"/><path d="M344 58V120"/>
+          <path d="M288 144H256" class="dash"/><path d="M168 58L56 120" class="dash"/>
+        </g>
+        <g class="node"><rect x="0" y="10" width="112" height="48" rx="8"/><text x="56" y="38">Client</text></g>
+        <g class="node accent"><rect x="144" y="10" width="112" height="48" rx="8"/><text x="200" y="30">Gateway</text><text x="200" y="46" class="sub">CDN failover</text></g>
+        <g class="node accent"><rect x="288" y="10" width="112" height="48" rx="8"/><text x="344" y="30">Layout service</text><text x="344" y="46" class="sub">isolated pools</text></g>
+        <g class="node"><rect x="288" y="120" width="112" height="48" rx="8"/><text x="344" y="140">Content source</text><text x="344" y="156" class="sub">primary</text></g>
+        <g class="node"><rect x="144" y="120" width="112" height="48" rx="8"/><text x="200" y="140">Fallback</text><text x="200" y="156" class="sub">kill switch</text></g>
+        <g class="node"><rect x="0" y="120" width="112" height="48" rx="8"/><text x="56" y="140">Static layouts</text><text x="56" y="156" class="sub">degraded mode</text></g>
+        <text x="200" y="214" class="note">dashed paths run only during a failure</text>
+      </svg>
+      <figcaption>Conceptual diagram: normal path on the right, degraded paths dashed.</figcaption>
+    </figure>
+  </article>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section wrap" aria-labelledby="exp-title">
+  <div class="section-head">
+    <p class="label">Experience</p>
+    <h2 id="exp-title">Airtel Digital, Gurugram</h2>
+  </div>
+  <ol class="timeline">
+    <li>
+      <div class="when"><span>Jul 2025 – present</span></div>
+      <div class="what">
+        <h3>Senior Software Engineer, Xstream backend</h3>
+        <ul>
+          <li>Designed and built Continue Watching, the event ingestion service, the IPTV session service and multi-CDN routing, and run them in production (case studies above).</li>
+          <li>Took over the UCLM campaign platform for Airtel India: 20+ services, 1.5B+ messages a day. Fixed build and load issues, wrote the deployment strategy, then stabilized and scaled it for the initial migration.</li>
+          <li>Root-caused production out-of-memory incidents and Scylla failures in the sync service, and remediated Black Duck and Coverity findings across 20+ Xstream services.</li>
+          <li>Contributed to an AI operations assistant for missing titles, playback failures and production errors, with reusable agent rules and a partner-integration guide.</li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="when"><span>Oct 2023 – Jun 2025</span></div>
+      <div class="what">
+        <h3>Software Engineer, Xstream backend</h3>
+        <ul>
+          <li>Implemented most of the code for the AWS to GCP migration of 20+ Xstream services: SQS and Kinesis to Kafka, S3 to GCS, MongoDB and ScyllaDB workloads, with load-tested Kafka partitions and no downtime.</li>
+          <li>Built the IPTV multi-CDN rule engine, a Debezium and Kafka pipeline that cut content-enrichment delay from 1–2 days to near real time, and event-driven episode promotion.</li>
+          <li>Onboarded Amazon Prime playback and Hotstar ingestion, upgraded package and discovery services to Java 21 and Spring Boot 3.5, and traced hourly p99 spikes to log-file rollover.</li>
+          <li>Adapted Prebid Server on Vert.x with a Druid analytics pipeline, and built a Keycloak role-based onboarding module.</li>
+        </ul>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- HOW I WORK -->
+<section class="section wrap" aria-labelledby="how-title">
+  <div class="section-head">
+    <p class="label">How I work</p>
+    <h2 id="how-title">Three habits the case studies share</h2>
+  </div>
+  <ul class="cards3">
+    <li><h3>Design for ordering</h3><p>Decide what must happen in order and enforce it structurally, for example by keying Kafka messages by user, instead of hoping races stay rare.</p></li>
+    <li><h3>Isolate failure</h3><p>Give products, thread pools and storage zones their own boundaries so one fault stays small, and always keep a degraded path that still answers.</p></li>
+    <li><h3>Measure before and after</h3><p>Pick the metric first (p99, throughput, buffering, recovery), take the baseline, and check it again after rollout.</p></li>
+  </ul>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section wrap" aria-labelledby="skills-title">
+  <div class="section-head">
+    <p class="label">Skills</p>
+    <h2 id="skills-title">Tools I use in production</h2>
+  </div>
+  <dl class="skills">
+    <div><dt>Languages</dt><dd>Java (8, 11, 17, 21, 25), C++, SQL</dd></div>
+    <div><dt>Frameworks</dt><dd>Spring Boot, Spring WebFlux, Spring Cloud, Vert.x, Kafka Streams, gRPC</dd></div>
+    <div><dt>Data and messaging</dt><dd>Apache Kafka, Kafka Connect, ScyllaDB (Cassandra-compatible), Aerospike, Redis, MongoDB, PostgreSQL, Elasticsearch, Apache Druid, Google Pub/Sub</dd></div>
+    <div><dt>Cloud and infra</dt><dd>Google Cloud Platform (GCP), Amazon Web Services (AWS), Kubernetes, Docker, Jenkins, Envoy, Istio, Apache Airflow</dd></div>
+    <div><dt>Practices</dt><dd>Distributed systems, event-driven architecture, reliability and failover design, observability (Grafana, Kibana, AppDynamics), API design</dd></div>
+  </dl>
+</section>
+
+<!-- SIDE PROJECTS -->
+<section class="section wrap" aria-labelledby="proj-title">
+  <div class="section-head">
+    <p class="label">Side projects</p>
+    <h2 id="proj-title">Tools I built for myself</h2>
+  </div>
+  <ul class="cards2">
+    <li>
+      <h3>Aerospike cluster workspace</h3>
+      <p>A web workspace for browsing namespaces and sets, searching and editing records, and checking cluster health, indexes and UDF modules. Long key-pattern operations run as background jobs with status polling and cancellation.</p>
+      <ul class="tags" aria-label="Technologies"><li>Java 21</li><li>Spring Boot</li><li>React</li><li>Vite</li></ul>
+    </li>
+    <li>
+      <h3>Reactive API gateway</h3>
+      <p>A gateway with MongoDB-backed dynamic routes, JWT authentication and authorization, custom filters, correlation IDs for tracing, admin APIs and Docker packaging.</p>
+      <ul class="tags" aria-label="Technologies"><li>Java 21</li><li>Spring Cloud Gateway</li><li>MongoDB</li><li>Docker</li></ul>
+    </li>
+  </ul>
+</section>
+
+<!-- EDUCATION -->
+<section class="section wrap" aria-labelledby="edu-title">
+  <div class="section-head">
+    <p class="label">Education</p>
+    <h2 id="edu-title">Malaviya National Institute of Technology, Jaipur</h2>
+    <p class="muted">B.Tech, Electronics and Communication Engineering · 2019 – 2023 · CGPA 8.16</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section wrap contact" aria-labelledby="contact-title">
+  <p class="label">Contact</p>
+  <h2 id="contact-title">Hiring for backend or platform engineering?</h2>
+  <p class="muted lead2">I would like to hear about teams where reliability, distributed systems and performance matter. Email is the fastest way to reach me.</p>
+  <div class="contact-row">
+    <a class="btn btn-primary" href="mailto:ramprasad.mnit@gmail.com">ramprasad.mnit@gmail.com</a>
+    <button id="copy-email" class="btn" type="button">Copy email</button>
+    <a class="btn" href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Download resume</a>
+  </div>
+  <p id="copy-status" class="status-msg" role="status" aria-live="polite"></p>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p>© <span id="year">2026</span> Ram Prasad Bidiyasar</p>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/ram-prasad-bidiyasar" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="https://github.com/RamPrasadBidiyasar" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://leetcode.com/u/Ram_Prasad_Bidiyasar/" rel="noopener noreferrer">LeetCode</a></li>
+      <li><a href="#top">Back to top</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

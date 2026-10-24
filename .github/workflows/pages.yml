@@ -33,10 +33,12 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site
-          cp index.html styles.css script.js .nojekyll _site/
+          cp index.html styles.css script.js sitemap.xml .nojekyll _site/
           cp -R assets _site/assets
           test -s _site/index.html
           test -s _site/assets/Ram-Prasad-Bidiyasar-Resume.pdf
+          test -s _site/assets/og-image.png
+          test -s _site/assets/fonts/inter-latin-var.woff2
           node --check _site/script.js
 
       - name: Upload site artifact
