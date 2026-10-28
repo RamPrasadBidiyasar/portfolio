@@ -339,7 +339,7 @@ try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') 
     <div class="case-text">
       <p class="label">05 · Resilient Home and layout service</p>
       <h3>Keep the home screen open when something behind it breaks</h3>
-      <ul class="metrics" aria-label="Key results"><li><b>30 → 100</b> TPS page generation</li><li><b>~30%</b> lower latency</li></ul>
+      <ul class="metrics" aria-label="Key results"><li><b>~99%</b> availability</li><li><b>30 → 100</b> TPS page generation</li><li><b>~30%</b> lower latency</li></ul>
       <p class="problem"><strong>Problem.</strong> The home and layout service depends on content sources and a CDN. If one is slow or down, the home page should still open, and a slow downstream call should not exhaust the service's threads.</p>
       <ul class="decisions">
         <li><strong>Fallback with a kill switch.</strong> When the primary content fetch fails, the service retries against a fallback source. A kill switch turns that off, and a response header says when fallback content was served, so operators can see it.</li>
@@ -347,7 +347,7 @@ try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') 
         <li><strong>Protect the thread pool.</strong> Fixed thread-pool exhaustion under slow downstream calls, so a slow dependency cannot take down the whole service.</li>
         <li><strong>Faster generation.</strong> Personalized page generation went from 30 to 100 TPS, with about 30% lower latency, using Java 21, gRPC, thread-pool tuning and parallel asynchronous calls.</li>
       </ul>
-      <p class="result"><strong>Result.</strong> Home and Rush stay available during dependency failures, and page generation scales to roughly 3x the previous throughput.</p>
+      <p class="result"><strong>Result.</strong> Availability is now about 99%, replacing 3–4 spikes a day and 10–15 minute failures during big events (3–4 times a year). Page generation scales to roughly 3x the previous throughput.</p>
       <ul class="tags" aria-label="Technologies"><li>Java 21</li><li>gRPC</li><li>Spring Boot</li><li>Envoy</li></ul>
     </div>
     <figure class="diagram">
@@ -400,8 +400,10 @@ try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') 
         <ul>
           <li>Designed and built Continue Watching, the event ingestion service, the IPTV session service and multi-CDN routing, and run them in production (case studies above).</li>
           <li>Took over the UCLM campaign platform for Airtel India: 20+ services, 1.5B+ messages a day. Fixed build and load issues, wrote the deployment strategy, then stabilized and scaled it for the initial migration.</li>
-          <li>Root-caused production out-of-memory incidents and Scylla failures in the sync service, and remediated Black Duck and Coverity findings across 20+ Xstream services.</li>
-          <li>Contributed to an AI operations assistant for missing titles, playback failures and production errors, with reusable agent rules and a partner-integration guide.</li>
+          <li>Led device management on Xstream: users see every device logged into their account and can log any out, so on a shared account that hits the concurrent-play limit they free a slot themselves instead of being locked out.</li>
+          <li>Drove partner onboarding for 3 partners (Fridaay, Amazon Prime, Hotstar), ingesting 10,944 titles; a reusable partner-integration guide and agent rules cut integration time from 2 weeks to 3 days.</li>
+          <li>Root-caused production out-of-memory incidents and Scylla failures in the sync service, and resolved Black Duck and Coverity findings in 20+ services by upgrading dependencies.</li>
+          <li>Built an AI operations assistant (Java 25, LangChain4j, Gemini on Vertex AI) that investigates missing titles and service errors across MongoDB, ELK and Prometheus, and runs PROD fixes only after confirmation.</li>
         </ul>
       </div>
     </li>
