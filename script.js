@@ -48,4 +48,25 @@
   } else {
     items.forEach(el => el.classList.add('in'));
   }
+  /* Diagram flow: arrows draw in once, normal path first, then the failure path. */
+  if ('IntersectionObserver' in window && !reduce) {
+    const flows = document.querySelectorAll('[data-flow]');
+    flows.forEach(box => {
+      const paths = [...box.querySelectorAll('.arrow, .arrow-fail, path[marker-end]')];
+      if (!paths.length) return;
+      const isFail = p => p.classList.contains('arrow-fail') || p.hasAttribute('stroke-dasharray');
+      const ok = paths.filter(p => !isFail(p)), bad = paths.filter(isFail);
+      [...ok, ...bad].forEach((p, i) => {
+        p.classList.add('flow-p');
+        if (!isFail(p)) { p.setAttribute('pathLength', '1'); p.classList.add('flow-solid'); }
+        const delay = i < ok.length ? i * 0.35 : ok.length * 0.35 + 0.5 + (i - ok.length) * 0.35;
+        p.style.setProperty('--d', delay.toFixed(2) + 's');
+      });
+      box.classList.add('is-armed');
+      const fio = new IntersectionObserver((es, o) => {
+        es.forEach(e => { if (e.isIntersecting) { box.classList.add('is-playing'); o.unobserve(box); } });
+      }, { threshold: 0.35 });
+      fio.observe(box);
+    });
+  }
 })();

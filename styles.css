@@ -353,3 +353,9 @@ html.js .reveal.in { opacity: 1; transform: none; }
   .section { padding-top: 28px; }
   .pv, .metric, .win { break-inside: avoid; }
 }
+
+/* Diagram flow: arrows draw in once when the figure scrolls into view. Armed only by script and only without reduced motion. */
+.is-armed .flow-p { opacity: 0; }
+.is-armed .flow-solid { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.is-playing .flow-p { animation: flow-in .7s ease-out forwards; animation-delay: var(--d, 0s); }
+@keyframes flow-in { to { opacity: 1; stroke-dashoffset: 0; } }

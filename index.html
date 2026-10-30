@@ -72,7 +72,7 @@
     </div>
     <p class="contact-links"><a class="text-link" href="https://www.linkedin.com/in/ram-prasad-bidiyasar" rel="noopener noreferrer">LinkedIn</a><a class="text-link" href="https://github.com/RamPrasadBidiyasar" rel="noopener noreferrer">GitHub</a><a class="text-link" href="mailto:ramprasad.mnit@gmail.com">ramprasad.mnit@gmail.com</a></p>
   </div>
-  <figure class="hero-fig">
+  <figure class="hero-fig" data-flow>
     <svg class="only-wide" viewBox="0 0 518 340" role="img" aria-label="Conceptual diagram: client events flow through an event service into Kafka and on to services. If Kafka is unavailable, events are held in a buffer and replayed by Kafka Connect.">
       <defs>
         <pattern id="hg" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="#E6DEC9" stroke-width="1"/></pattern>
@@ -253,16 +253,17 @@
 <!-- EXPERIENCE -->
 <section class="wrap section" id="experience" aria-labelledby="exp-title">
   <div class="opener"><span class="lab">03 · Experience</span><span class="lab">Airtel Digital · Gurugram, India</span></div>
-  <h2 class="h2" id="exp-title">Two years of ownership, <em>end to end</em></h2>
+  <h2 class="h2" id="exp-title">Three years of ownership, <em>end to end</em></h2>
   <div class="role reveal">
     <div class="role-meta"><p class="when">Jul 2025 – present</p><p class="title">Senior Software Engineer</p><p class="team">Xstream backend</p></div>
     <div class="rail now">
       <div class="win"><span class="hl">−70%</span><span class="tx">Redesigned <b>Continue Watching</b> from scratch, with Kafka-ordered writes. Sync latency fell by nearly 70%.</span></div>
       <div class="win"><span class="hl">6x</span><span class="tx">Rebuilt the <b>event ingestion service</b> on Java 25: about 400 to 2,500 requests per second per pod.</span></div>
       <div class="win"><span class="hl">10M+</span><span class="tx">Built <b>multi-CDN routing</b> for IPTV playback, cutting buffering from 1% to 0.07%.</span></div>
+      <div class="win"><span class="hl sm">AI operations assistant</span><span class="tx">Built an <b>AI operations assistant</b> (Java 25, LangChain4j, Gemini on Vertex AI) that investigates missing titles and service errors across MongoDB, ELK and Prometheus, and runs PROD fixes only after confirmation.</span></div>
+      <div class="win"><span class="hl sm">20+ services</span><span class="tx">Took over the <b>UCLM campaign platform</b> (1.5B+ messages a day) to stabilize and scale it, and designed the <b>IPTV session service</b>. Resolved Black Duck and Coverity findings in 20+ services by upgrading dependencies.</span></div>
       <div class="win"><span class="hl sm">2 weeks → 3 days</span><span class="tx">Drove <b>partner onboarding</b> for 3 partners (Fridaay, Amazon Prime, Hotstar), ingesting 10,944 titles. A reusable partner-integration guide and agent rules cut integration time.</span></div>
       <div class="win"><span class="hl sm">Device management</span><span class="tx">Led <b>device management</b> on Xstream: users see every device logged into their account and can log any out, so on a shared account that hits the concurrent-play limit they free a slot themselves instead of being locked out.</span></div>
-      <p class="also">Also designed the IPTV session service; took over the UCLM campaign platform (20+ services, 1.5B+ messages a day) to stabilize and scale it; resolved Black Duck and Coverity findings in 20+ services by upgrading dependencies; and built an AI operations assistant (Java 25, LangChain4j, Gemini on Vertex AI) that investigates missing titles and service errors across MongoDB, ELK and Prometheus, and runs PROD fixes only after confirmation.</p>
     </div>
   </div>
   <div class="role reveal">
@@ -311,6 +312,6 @@
 </section>
 </main>
 
-<footer class="wrap footer"><span>© <span id="year">2026</span> Ram Prasad Bidiyasar</span><span class="mono" style="font-size: 12px">Set in Newsreader, Instrument Sans and IBM Plex Mono</span></footer>
+<footer class="wrap footer"><span>© <span id="year">2026</span> Ram Prasad Bidiyasar</span></footer>
 </body>
 </html>
