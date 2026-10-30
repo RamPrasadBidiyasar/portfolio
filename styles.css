@@ -360,3 +360,11 @@ html.js .reveal.in { opacity: 1; transform: none; }
 .is-playing .flow-p { animation: flow-in .7s ease-out forwards; animation-delay: var(--d, 0s); }
 @keyframes flow-in { to { opacity: 1; stroke-dashoffset: 0; } }
 .results:has(> div:nth-child(4)) .num-l { font-size: clamp(30px, 3.3vw, 44px); white-space: nowrap; padding-top: 12px; }
+
+/* Four impact metrics sit as a 2x2 grid. */
+.metrics-row:has(> .metric:nth-child(4)) .metric { flex-basis: 460px; }
+.metrics-row:has(> .metric:nth-child(4)) .metric:nth-child(3) { border-left: 0; padding-left: 0; }
+.metrics-row:has(> .metric:nth-child(4)) .metric:nth-child(n+3) { border-top: 1px solid var(--hair); }
+/* Education closes the Experience section. */
+.role.edu { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--hair); }
+.role.edu .role-meta { flex: 1 1 auto; min-width: 0; }
