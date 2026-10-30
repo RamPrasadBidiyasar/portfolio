@@ -52,19 +52,31 @@
   if ('IntersectionObserver' in window && !reduce) {
     const flows = document.querySelectorAll('[data-flow]');
     flows.forEach(box => {
-      const paths = [...box.querySelectorAll('.arrow, .arrow-fail, path[marker-end]')];
-      if (!paths.length) return;
+      /* Each diagram variant (wide or narrow) gets its own timeline. */
+      const groups = [...box.querySelectorAll('svg')].map(svg => [...svg.querySelectorAll('.arrow, .arrow-fail, path[marker-end]')]).filter(g => g.length);
+      if (!groups.length) return;
       const isFail = p => p.classList.contains('arrow-fail') || p.hasAttribute('stroke-dasharray');
-      const ok = paths.filter(p => !isFail(p)), bad = paths.filter(isFail);
-      [...ok, ...bad].forEach((p, i) => {
-        p.classList.add('flow-p');
-        if (!isFail(p)) { p.setAttribute('pathLength', '1'); p.classList.add('flow-solid'); }
-        const delay = i < ok.length ? i * 0.35 : ok.length * 0.35 + 0.5 + (i - ok.length) * 0.35;
-        p.style.setProperty('--d', delay.toFixed(2) + 's');
+      let longest = 0;
+      groups.forEach(paths => {
+        const ok = paths.filter(p => !isFail(p)), bad = paths.filter(isFail);
+        [...ok, ...bad].forEach((p, i) => {
+          p.classList.add('flow-p');
+          if (!isFail(p)) { p.setAttribute('pathLength', '1'); p.classList.add('flow-solid'); }
+          const delay = i < ok.length ? i * 0.35 : ok.length * 0.35 + 0.5 + (i - ok.length) * 0.35;
+          p.style.setProperty('--d', delay.toFixed(2) + 's');
+          longest = Math.max(longest, delay + 0.7);
+        });
       });
       box.classList.add('is-armed');
       const fio = new IntersectionObserver((es, o) => {
-        es.forEach(e => { if (e.isIntersecting) { box.classList.add('is-playing'); o.unobserve(box); } });
+        es.forEach(e => {
+          if (!e.isIntersecting) return;
+          box.classList.add('is-playing');
+          o.unobserve(box);
+          /* Then play the event story once: packets on the normal path, then one through the buffer. */
+          const go = box.querySelector('#heroGo');
+          if (go && go.beginElement) setTimeout(() => go.beginElement(), longest * 1000);
+        });
       }, { threshold: 0.35 });
       fio.observe(box);
     });

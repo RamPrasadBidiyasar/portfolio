@@ -73,27 +73,41 @@
     <p class="contact-links"><a class="text-link" href="https://www.linkedin.com/in/ram-prasad-bidiyasar" rel="noopener noreferrer">LinkedIn</a><a class="text-link" href="https://github.com/RamPrasadBidiyasar" rel="noopener noreferrer">GitHub</a><a class="text-link" href="mailto:ramprasad.mnit@gmail.com">ramprasad.mnit@gmail.com</a></p>
   </div>
   <figure class="hero-fig" data-flow>
-    <svg class="only-wide" viewBox="0 0 518 340" role="img" aria-label="Conceptual diagram: client events flow through an event service into Kafka and on to services. If Kafka is unavailable, events are held in a buffer and replayed by Kafka Connect.">
+    <svg class="only-wide" viewBox="0 0 560 322" role="img" aria-label="Conceptual diagram: client events flow through an event service into Kafka and on to services. If Kafka is unavailable, events are held in a Pub/Sub buffer and replayed into Kafka by Kafka Connect when it recovers.">
       <defs>
-        <pattern id="hg" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="#E6DEC9" stroke-width="1"/></pattern>
+        <pattern id="hg" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#E9E2D0" stroke-width="1"/></pattern>
         <marker id="ha" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1F5A43"/></marker>
         <marker id="hb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#A8481A"/></marker>
       </defs>
-      <rect width="518" height="340" fill="url(#hg)"/>
+      <rect width="560" height="322" fill="url(#hg)"/>
+      <rect width="1" height="1" fill="none"><animate id="heroGo" attributeName="x" from="0" to="0" dur="0.1s" begin="indefinite"/></rect>
+      <g font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="0.06em" fill="#5E5A52"><text x="0" y="22">NORMAL PATH · STEPS 1–3</text><text x="0" y="198" fill="#A8481A">ONLY WHILE KAFKA IS DOWN</text></g>
       <g fill="none" stroke-width="1.6">
-        <path d="M104 74H138" stroke="#1F5A43" marker-end="url(#ha)"/><path d="M242 74H276" stroke="#1F5A43" marker-end="url(#ha)"/><path d="M380 74H414" stroke="#1F5A43" marker-end="url(#ha)"/>
-        <path d="M190 100V218" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#hb)"/><path d="M242 244H276" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#hb)"/><path d="M328 218V102" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#hb)"/>
+        <path d="M104 70H150" stroke="#1F5A43" marker-end="url(#ha)"/><path d="M256 70H302" stroke="#1F5A43" marker-end="url(#ha)"/><path d="M408 70H454" stroke="#1F5A43" marker-end="url(#ha)"/>
+        <path d="M204 100V208" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#hb)"/><path d="M256 242H302" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#hb)"/><path d="M356 212V104" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#hb)"/>
       </g>
-      <g font-family="Instrument Sans, sans-serif" font-size="12.5" font-weight="600" text-anchor="middle">
-        <rect x="0" y="50" width="104" height="48" fill="#FFFFFF" stroke="#1C1B19"/><text x="52" y="79" fill="#1C1B19">Clients</text>
-        <rect x="138" y="50" width="104" height="48" fill="#FFFFFF" stroke="#1C1B19"/><text x="190" y="79" fill="#1C1B19">Event service</text>
-        <rect x="276" y="50" width="104" height="48" fill="#1C1B19"/><text x="328" y="79" fill="#F7F3EA">Kafka</text>
-        <rect x="414" y="50" width="104" height="48" fill="#FFFFFF" stroke="#1C1B19"/><text x="466" y="79" fill="#1C1B19">Services</text>
-        <rect x="138" y="220" width="104" height="48" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="4 3"/><text x="190" y="249" fill="#7A3512">Buffer</text>
-        <rect x="276" y="220" width="104" height="48" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="4 3"/><text x="328" y="249" fill="#7A3512">Kafka Connect</text>
+      <g class="pkts">
+        <circle r="5" fill="#1F5A43" opacity="0"><animateMotion path="M60 70H500" dur="2.4s" begin="heroGo.begin" fill="freeze"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.9;1" dur="2.4s" begin="heroGo.begin" fill="freeze"/></circle>
+        <circle r="5" fill="#1F5A43" opacity="0"><animateMotion path="M60 70H500" dur="2.4s" begin="heroGo.begin+0.5s" fill="freeze"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.9;1" dur="2.4s" begin="heroGo.begin+0.5s" fill="freeze"/></circle>
+        <circle r="5" fill="#1F5A43" opacity="0"><animateMotion path="M60 70H500" dur="2.4s" begin="heroGo.begin+1s" fill="freeze"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.06;0.9;1" dur="2.4s" begin="heroGo.begin+1s" fill="freeze"/></circle>
+        <circle r="5" fill="#A8481A" opacity="0"><animateMotion path="M60 70H204V242H356V70H500" keyPoints="0;0.403;0.403;1" keyTimes="0;0.35;0.6;1" calcMode="linear" dur="4.4s" begin="heroGo.begin+3.4s" fill="freeze"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.95;1" dur="4.4s" begin="heroGo.begin+3.4s" fill="freeze"/></circle>
       </g>
-      <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#5E5A52"><text x="0" y="306">green: normal path</text><text x="0" y="324" fill="#A8481A">orange: only while Kafka is down</text></g>
-      <g font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#FFFFFF"><circle cx="121" cy="74" r="9" fill="#1F5A43"/><text x="121" y="78">1</text><circle cx="259" cy="74" r="9" fill="#1F5A43"/><text x="259" y="78">2</text><circle cx="397" cy="74" r="9" fill="#1F5A43"/><text x="397" y="78">3</text></g>
+      <g font-family="Instrument Sans, sans-serif" font-size="14.5" font-weight="600" text-anchor="middle">
+        <rect x="0" y="40" width="104" height="60" fill="#FFFFFF" stroke="#1C1B19"/><text x="52" y="68" fill="#1C1B19">Clients</text>
+        <rect x="152" y="40" width="104" height="60" fill="#FFFFFF" stroke="#1C1B19"/><text x="204" y="68" fill="#1C1B19">Event service</text>
+        <rect x="304" y="40" width="104" height="60" fill="#1C1B19"/><text x="356" y="68" fill="#F7F3EA">Kafka</text>
+        <rect x="456" y="40" width="104" height="60" fill="#FFFFFF" stroke="#1C1B19"/><text x="508" y="68" fill="#1C1B19">Services</text>
+        <rect x="152" y="212" width="104" height="60" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="4 3"/><text x="204" y="240" fill="#7A3512">Buffer</text>
+        <rect x="304" y="212" width="104" height="60" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="4 3"/><text x="356" y="240" fill="#7A3512" font-size="13">Kafka Connect</text>
+      </g>
+      <g font-family="IBM Plex Mono, monospace" font-size="11" text-anchor="middle" fill="#5E5A52"><text x="52" y="85">TV · phone</text><text x="204" y="85">Java 25</text><text x="356" y="84" fill="#CFC8B6">per product</text><text x="508" y="85">consumers</text><text x="204" y="257" fill="#7A3512">Pub/Sub</text><text x="356" y="257" fill="#7A3512">replay</text></g>
+      <g opacity="0" font-family="Instrument Sans, sans-serif" font-weight="600" text-anchor="middle">
+        <rect x="304" y="40" width="104" height="60" fill="#7A3512"/><text x="356" y="68" font-size="14.5" fill="#F7F3EA">Kafka</text><text x="356" y="85" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="400" fill="#F6E4D6">unavailable</text>
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.92;1" dur="3.2s" begin="heroGo.begin+3s" fill="freeze"/>
+      </g>
+      <g font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#FFFFFF"><circle cx="128" cy="50" r="9" fill="#1F5A43"/><text x="128" y="54">1</text><circle cx="280" cy="50" r="9" fill="#1F5A43"/><text x="280" y="54">2</text><circle cx="432" cy="50" r="9" fill="#1F5A43"/><text x="432" y="54">3</text></g>
+      <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#A8481A"><text x="212" y="160">Kafka down</text><text x="364" y="160">replay on recovery</text></g>
+      <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#5E5A52"><path d="M0 306H24" stroke="#1F5A43" stroke-width="1.6"/><text x="32" y="310">normal path</text><path d="M150 306H174" stroke="#A8481A" stroke-width="1.6" stroke-dasharray="5 4"/><text x="182" y="310">buffered, then replayed</text></g>
     </svg>
     <svg class="only-narrow" viewBox="0 0 330 250" role="img" aria-label="Conceptual diagram: clients send events to an event service, then Kafka, then services. If Kafka is down, events wait in a buffer and Kafka Connect replays them.">
       <defs>
@@ -111,7 +125,7 @@
       </g>
       <text x="190" y="205" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#A8481A">only while Kafka is down</text>
     </svg>
-    <figcaption class="lab">Fig. 1 · Event flow · conceptual, not the production topology</figcaption>
+    <figcaption class="lab">Fig. 1 · Event ingestion · conceptual, not the production topology</figcaption>
   </figure>
 </section>
 

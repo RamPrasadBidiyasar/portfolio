@@ -76,7 +76,7 @@ em { font-style: italic; font-weight: 400; color: var(--forest); }
 .status i { width: 9px; height: 9px; border-radius: 50%; background: var(--forest); }
 .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 0 24px; font: 400 13px/1.5 var(--mono); letter-spacing: 0.04em; }
-.hero-fig { flex: 5 1 380px; min-width: 0; padding: 20px 20px 14px; background: var(--paper-2); border: 1px solid var(--hair); }
+.hero-fig { flex: 5 1 380px; align-self: center; min-width: 0; padding: 20px 20px 14px; background: var(--paper-2); border: 1px solid var(--hair); }
 .hero-fig figcaption { margin-top: 10px; font-size: 11px; }
 
 /* ---------- Diagram vocabulary (shared by hero figure and case pages) ---------- */
