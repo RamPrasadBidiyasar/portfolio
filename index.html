@@ -46,13 +46,13 @@
   <div class="nav">
     <a class="brand" href="#top">Ram Prasad Bidiyasar</a>
     <nav class="nav-links" aria-label="Main">
-      <a href="#work">Case studies</a><a href="#experience">Experience</a><a href="#philosophy">Philosophy</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      <a href="#work">Case studies</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#philosophy">Philosophy</a><a href="#contact">Contact</a>
     </nav>
     <a class="nav-resume" href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Resume</a>
     <details class="menu">
       <summary aria-label="Open menu"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 8h18M3 16h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" fill="none"/></svg></summary>
       <div class="menu-list">
-        <a href="#work">Case studies</a><a href="#experience">Experience</a><a href="#philosophy">Philosophy</a><a href="#skills">Skills</a><a href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Resume <span aria-hidden="true">↓</span></a>
+        <a href="#work">Case studies</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#philosophy">Philosophy</a><a href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Resume <span aria-hidden="true">↓</span></a>
       </div>
     </details>
   </div>
@@ -253,7 +253,8 @@
 <!-- EXPERIENCE -->
 <section class="wrap section" id="experience" aria-labelledby="exp-title">
   <div class="opener"><span class="lab">03 · Experience</span><span class="lab">Airtel Digital · Gurugram, India</span></div>
-  <h2 class="h2" id="exp-title">Three years of ownership, <em>end to end</em></h2>
+  <h2 class="h2" id="exp-title">Three years of building and <em>owning backend systems</em></h2>
+  <p class="lede" style="margin: -16px 0 40px">Joined as a Software Engineer in Oct 2023 and Senior Software Engineer since Jul 2025, on the Xstream and IPTV backend: Java, Kafka, ScyllaDB and Google Cloud.</p>
   <div class="role reveal">
     <div class="role-meta"><p class="when">Jul 2025 – present</p><p class="title">Senior Software Engineer</p><p class="team">Xstream backend</p></div>
     <div class="rail now">
@@ -276,22 +277,9 @@
   </div>
 </section>
 
-<!-- PHILOSOPHY -->
-<section class="dark section" id="philosophy" aria-labelledby="phil-title" style="margin-top: 120px; padding: 96px 0 104px">
-  <div class="wrap">
-    <div class="opener light"><span class="lab">04 · Philosophy</span><span class="lab">Three habits the case studies share</span></div>
-    <h2 class="phil-h" id="phil-title">How I think about systems.</h2>
-    <div class="phil reveal">
-      <div><p class="roman" aria-hidden="true">I.</p><h3>Design for ordering</h3><p>Decide what must happen in order, then make the system enforce it, for example by keying Kafka messages by user.</p><p class="lab">Seen in · <a href="case/continue-watching.html">01</a> · <a href="case/iptv-session-service.html">04</a></p></div>
-      <div><p class="roman" aria-hidden="true">II.</p><h3>Isolate failure</h3><p>Give products, thread pools and zones their own boundaries, and keep a degraded path that still answers.</p><p class="lab">Seen in · <a href="case/event-ingestion.html">03</a> · <a href="case/resilient-home.html">05</a></p></div>
-      <div><p class="roman" aria-hidden="true">III.</p><h3>Measure before and after</h3><p>Pick the metric first, take the baseline, and check it again after rollout.</p><p class="lab">Seen in · all five</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- SKILLS -->
 <section class="wrap section" id="skills" aria-labelledby="skills-title">
-  <div class="opener"><h2 class="lab" id="skills-title">05 · Skills</h2><span class="lab">Tools used in production, and where</span></div>
+  <div class="opener"><h2 class="lab" id="skills-title">04 · Skills</h2><span class="lab">Tools used in production, and where</span></div>
   <dl style="margin-top: 28px; border-top: 0">
     <div class="skill"><dt>Languages</dt><dd>Java (8, 11, 17, 21, 25) · SQL · C++</dd><dd class="seen">Seen in 01 – 05</dd></div>
     <div class="skill"><dt>Services and APIs</dt><dd>Spring Boot · Spring WebFlux · Spring Cloud · Vert.x · gRPC</dd><dd class="seen">Seen in 01 · 05</dd></div>
@@ -299,6 +287,19 @@
     <div class="skill"><dt>Cloud and delivery</dt><dd>Google Cloud Platform · Amazon Web Services · Kubernetes · Docker · Jenkins · Envoy · Apache Airflow</dd><dd class="seen">Seen in 03 · 05</dd></div>
     <div class="skill"><dt>Reliability</dt><dd>Failover design · fallbacks and kill switches · Grafana · Kibana · AppDynamics</dd><dd class="seen">Seen in 02 · 03 · 05</dd></div>
   </dl>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="dark section" id="philosophy" aria-labelledby="phil-title" style="margin-top: 120px; padding: 96px 0 104px">
+  <div class="wrap">
+    <div class="opener light"><span class="lab">05 · Philosophy</span><span class="lab">Three habits the case studies share</span></div>
+    <h2 class="phil-h" id="phil-title">How I think about systems.</h2>
+    <div class="phil reveal">
+      <div><p class="roman" aria-hidden="true">I.</p><h3>Design for ordering</h3><p>Decide what must happen in order, then make the system enforce it, for example by keying Kafka messages by user.</p><p class="lab">Seen in · <a href="case/continue-watching.html">01</a> · <a href="case/iptv-session-service.html">04</a></p></div>
+      <div><p class="roman" aria-hidden="true">II.</p><h3>Isolate failure</h3><p>Give products, thread pools and zones their own boundaries, and keep a degraded path that still answers.</p><p class="lab">Seen in · <a href="case/event-ingestion.html">03</a> · <a href="case/resilient-home.html">05</a></p></div>
+      <div><p class="roman" aria-hidden="true">III.</p><h3>Measure before and after</h3><p>Pick the metric first, take the baseline, and check it again after rollout.</p><p class="lab">Seen in · all five</p></div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
