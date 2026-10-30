@@ -136,7 +136,7 @@
     <div class="metric-big"><div class="num-xl">10M+</div><div class="metric-body"><p class="metric-name">active users on IPTV playback</p><p class="lab plain">Scope · playback routed by the multi-CDN engine</p></div></div>
     <div class="metric-big"><div class="num-xl">80–90K<small>/s</small></div><div class="metric-body"><p class="metric-name">events per second at live-match peaks</p><p class="lab plain">Scope · the event ingestion service</p></div></div>
   </div>
-  <div class="metrics-row reveal">
+  <div class="metrics-row grid-2 reveal">
     <div class="metric"><div class="num-l">~6x</div><div><p class="metric-name">throughput per pod</p><p class="lab plain">Scope · event service, about 400 → 2,500 req/s</p></div></div>
     <div class="metric"><div class="num-l">−75%</div><div><p class="metric-name">p99 latency on watch-history reads</p><p class="lab plain">Scope · Watch Info v2, with about 4x throughput per instance</p></div></div>
     <div class="metric"><div class="num-l fit">1% <span style="color: var(--graphite)">→</span> 0.07%</div><div><p class="metric-name">buffering rate</p><p class="lab plain">Scope · IPTV playback after multi-CDN routing and failover</p></div></div>
