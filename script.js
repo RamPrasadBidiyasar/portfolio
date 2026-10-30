@@ -73,9 +73,15 @@
           if (!e.isIntersecting) return;
           box.classList.add('is-playing');
           o.unobserve(box);
-          /* Then play the event story once: packets on the normal path, then one through the buffer. */
-          const go = box.querySelector('#heroGo');
-          if (go && go.beginElement) setTimeout(() => go.beginElement(), longest * 1000);
+          /* Then play the diagram's story once: event packets in the hero, numbered steps on case pages. */
+          setTimeout(() => {
+            box.querySelectorAll('animate[data-go]').forEach(a => a.beginElement && a.beginElement());
+            const steps = [...new Set([...box.querySelectorAll('[data-step]')].map(el => el.getAttribute('data-step')))].sort((a, b) => a - b);
+            steps.forEach((n, i) => {
+              setTimeout(() => setStep(n, true), i * 750);
+              setTimeout(() => setStep(n, false), i * 750 + 700);
+            });
+          }, longest * 1000);
         });
       }, { threshold: 0.35 });
       fio.observe(box);
