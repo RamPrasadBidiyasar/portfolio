@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Resilient Home | Case study | Ram Prasad Bidiyasar</title>
-<meta name="description" content="Case study: keeping the home screen available during dependency failures, and raising personalized page generation from 30 to 100 TPS.">
+<meta name="description" content="Case study: keeping the home screen available during dependency failures. About 99% availability, and personalized page generation raised from 30 to 100 TPS.">
 <link rel="canonical" href="https://ramprasadbidiyasar.github.io/portfolio/case/resilient-home.html">
 <meta name="theme-color" content="#F7F3EA">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Ram Prasad Bidiyasar">
 <meta property="og:title" content="Resilient Home | Case study">
-<meta property="og:description" content="Case study: keeping the home screen available during dependency failures, and raising personalized page generation from 30 to 100 TPS.">
+<meta property="og:description" content="Case study: keeping the home screen available during dependency failures. About 99% availability, and personalized page generation raised from 30 to 100 TPS.">
 <meta property="og:url" content="https://ramprasadbidiyasar.github.io/portfolio/case/resilient-home.html">
 <meta property="og:image" content="https://ramprasadbidiyasar.github.io/portfolio/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -32,7 +32,7 @@
     <h1 id="case-title">Keep the home screen open <em>when something behind it breaks.</em></h1>
     <p class="intro">How the home and layout service stays available: fallback retries with a kill switch, gateway failover to static layouts, and thread pools that keep a slow dependency from taking the service down.</p>
   </div>
-  <div class="results"><div><p class="num-l">30 → 100</p><p class="metric-name">TPS, personalized page generation</p><p class="lab plain">Scope · Java 21, gRPC, parallel asynchronous calls</p></div><div><p class="num-l">~30%</p><p class="metric-name">lower latency</p><p class="lab plain">Scope · page generation</p></div></div>
+  <div class="results"><div><p class="num-l">~99%</p><p class="metric-name">availability</p><p class="lab plain">Scope · Home and Rush, replacing 3–4 daily spikes and 10–15 minute failures at big events</p></div><div><p class="num-l">30 → 100</p><p class="metric-name">TPS, personalized page generation</p><p class="lab plain">Scope · Java 21, gRPC, parallel asynchronous calls</p></div><div><p class="num-l">~30%</p><p class="metric-name">lower latency</p><p class="lab plain">Scope · page generation</p></div></div>
 </section>
 
 <section class="wrap" aria-label="Role and stack">
@@ -69,7 +69,7 @@
 
 <section class="wrap" style="margin-top: 96px" aria-labelledby="res-title">
   <div class="opener"><h2 class="lab" id="res-title">Results</h2></div>
-  <p class="statement">Home and Rush stay available during dependency failures, and page generation scales from <b>30 to 100 TPS</b>.</p>
+  <p class="statement">Availability is now <b>about 99%</b>, replacing 3–4 spikes a day and 10–15 minute failures during big events (3–4 times a year). Page generation scales from <b>30 to 100 TPS</b>.</p>
 </section>
 
 <section class="dark next on-dark" aria-label="Next case study">

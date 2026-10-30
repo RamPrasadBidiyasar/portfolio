@@ -227,7 +227,7 @@
         <p class="lab green">05 · Fault isolation and fallback</p>
         <h3>Resilient Home</h3>
         <p>Keep the home screen open when something behind it breaks.</p>
-        <div class="res"><div><span class="n">30 → 100</span><span class="l">TPS, page generation</span></div><div><span class="n">~30%</span><span class="l">lower latency</span></div></div>
+        <div class="res"><div><span class="n">~99%</span><span class="l">availability</span></div><div><span class="n">30 → 100</span><span class="l">TPS, page generation</span></div><div><span class="n">~30%</span><span class="l">lower latency</span></div></div>
         <a class="pv-link" href="case/resilient-home.html">Read the case study<span aria-hidden="true">→</span></a>
       </div>
       <div class="pv-art">
@@ -260,7 +260,9 @@
       <div class="win"><span class="hl">−70%</span><span class="tx">Redesigned <b>Continue Watching</b> from scratch, with Kafka-ordered writes. Sync latency fell by nearly 70%.</span></div>
       <div class="win"><span class="hl">6x</span><span class="tx">Rebuilt the <b>event ingestion service</b> on Java 25: about 400 to 2,500 requests per second per pod.</span></div>
       <div class="win"><span class="hl">10M+</span><span class="tx">Built <b>multi-CDN routing</b> for IPTV playback, cutting buffering from 1% to 0.07%.</span></div>
-      <p class="also">Also designed the IPTV session service, and took over the UCLM campaign platform (20+ services, 1.5B+ messages a day) to stabilize and scale it.</p>
+      <div class="win"><span class="hl sm">2 weeks → 3 days</span><span class="tx">Drove <b>partner onboarding</b> for 3 partners (Fridaay, Amazon Prime, Hotstar), ingesting 10,944 titles. A reusable partner-integration guide and agent rules cut integration time.</span></div>
+      <div class="win"><span class="hl sm">Device management</span><span class="tx">Led <b>device management</b> on Xstream: users see every device logged into their account and can log any out, so on a shared account that hits the concurrent-play limit they free a slot themselves instead of being locked out.</span></div>
+      <p class="also">Also designed the IPTV session service; took over the UCLM campaign platform (20+ services, 1.5B+ messages a day) to stabilize and scale it; resolved Black Duck and Coverity findings in 20+ services by upgrading dependencies; and built an AI operations assistant (Java 25, LangChain4j, Gemini on Vertex AI) that investigates missing titles and service errors across MongoDB, ELK and Prometheus, and runs PROD fixes only after confirmation.</p>
     </div>
   </div>
   <div class="role reveal">
