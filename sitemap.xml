@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ramprasadbidiyasar.github.io/portfolio/</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://ramprasadbidiyasar.github.io/portfolio/case/continue-watching.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://ramprasadbidiyasar.github.io/portfolio/case/multi-cdn-routing.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://ramprasadbidiyasar.github.io/portfolio/case/event-ingestion.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://ramprasadbidiyasar.github.io/portfolio/case/iptv-session-service.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://ramprasadbidiyasar.github.io/portfolio/case/resilient-home.html</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
 </urlset>

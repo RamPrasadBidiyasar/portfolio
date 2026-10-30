@@ -34,11 +34,13 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html styles.css script.js sitemap.xml .nojekyll _site/
+          cp -R case _site/case
           cp -R assets _site/assets
           test -s _site/index.html
           test -s _site/assets/Ram-Prasad-Bidiyasar-Resume.pdf
           test -s _site/assets/og-image.png
-          test -s _site/assets/fonts/inter-latin-var.woff2
+          test -s _site/assets/fonts/newsreader-500.woff2
+          test -s _site/case/continue-watching.html
           node --check _site/script.js
 
       - name: Upload site artifact

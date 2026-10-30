@@ -4,32 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ram Prasad Bidiyasar | Senior Software Engineer, Backend and Distributed Systems</title>
-<meta name="description" content="Ram Prasad Bidiyasar is a Senior Software Engineer at Airtel Digital building the Xstream backend: Kafka event pipelines, ScyllaDB and Aerospike data models, multi-CDN playback and resilient APIs for 10M+ users.">
+<meta name="description" content="Ram Prasad Bidiyasar is a Senior Software Engineer at Airtel Digital designing high-throughput distributed systems, resilient services and data-intensive platforms. Five case studies with architecture diagrams and measured results.">
 <link rel="canonical" href="https://ramprasadbidiyasar.github.io/portfolio/">
-<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
-
+<meta name="theme-color" content="#F7F3EA">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ram Prasad Bidiyasar">
 <meta property="og:title" content="Ram Prasad Bidiyasar | Senior Software Engineer, Backend">
-<meta property="og:description" content="Kafka pipelines, ScyllaDB and Aerospike data models, multi-CDN playback and resilient APIs behind Airtel Xstream. Case studies with diagrams and measured results.">
+<meta property="og:description" content="Backend systems that stay reliable at scale: Kafka pipelines, ScyllaDB and Aerospike data models, multi-CDN playback. Case studies with architecture diagrams.">
 <meta property="og:url" content="https://ramprasadbidiyasar.github.io/portfolio/">
 <meta property="og:image" content="https://ramprasadbidiyasar.github.io/portfolio/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Ram Prasad Bidiyasar, Senior Software Engineer, backend and distributed systems">
 <meta name="twitter:card" content="summary_large_image">
-
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/newsreader-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
-
-<script>
-/* Apply the saved theme before first paint to avoid a flash. */
-try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
-</script>
+<script>document.documentElement.className += ' js';</script>
 <script src="script.js" defer></script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -42,467 +35,280 @@ try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') 
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Malaviya National Institute of Technology Jaipur" },
   "address": { "@type": "PostalAddress", "addressLocality": "Gurugram", "addressCountry": "IN" },
   "knowsAbout": ["Distributed systems", "Apache Kafka", "ScyllaDB", "Aerospike", "Java", "Spring Boot", "Event-driven architecture", "Backend engineering"],
-  "sameAs": [
-    "https://www.linkedin.com/in/ram-prasad-bidiyasar",
-    "https://github.com/RamPrasadBidiyasar",
-    "https://leetcode.com/u/Ram_Prasad_Bidiyasar/"
-  ]
+  "sameAs": ["https://www.linkedin.com/in/ram-prasad-bidiyasar", "https://github.com/RamPrasadBidiyasar", "https://leetcode.com/u/Ram_Prasad_Bidiyasar/"]
 }
 </script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Ram Prasad Bidiyasar, back to top">RP<span aria-hidden="true">.</span></a>
-    <nav aria-label="Main">
-      <a href="#work">Case studies</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+<header class="wrap nav-wrap">
+  <div class="nav">
+    <a class="brand" href="#top">Ram Prasad Bidiyasar</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#work">Case studies</a><a href="#experience">Experience</a><a href="#philosophy">Philosophy</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
     </nav>
-    <div class="bar-actions">
-      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch color theme" aria-pressed="false">
-        <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
-        <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></g></svg>
-      </button>
-      <a class="btn btn-small" href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Resume</a>
-    </div>
+    <a class="nav-resume" href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Resume</a>
+    <details class="menu">
+      <summary aria-label="Open menu"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 8h18M3 16h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" fill="none"/></svg></summary>
+      <div class="menu-list">
+        <a href="#work">Case studies</a><a href="#experience">Experience</a><a href="#philosophy">Philosophy</a><a href="#skills">Skills</a><a href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Resume <span aria-hidden="true">↓</span></a>
+      </div>
+    </details>
   </div>
 </header>
 
 <main id="main">
 <!-- HERO -->
-<section class="hero wrap" id="top" aria-labelledby="hero-title">
+<section class="wrap hero" id="top" aria-labelledby="hero-title">
   <div class="hero-copy">
-    <p class="status"><span class="dot" aria-hidden="true"></span> Open to backend and platform engineering roles</p>
-    <h1 id="hero-title">Ram Prasad Bidiyasar</h1>
-    <p class="role">Senior Software Engineer, backend and distributed systems</p>
-    <p class="lede">I build the backend behind Airtel Xstream: Kafka event pipelines, ScyllaDB and Aerospike data models, multi-CDN playback, and APIs that stay up when their dependencies do not.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#work">Read the case studies</a>
-      <a class="btn" href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Download resume</a>
-      <a class="btn btn-ghost" href="mailto:ramprasad.mnit@gmail.com">Email me</a>
+    <p class="lab">Senior Software Engineer · Airtel Digital</p>
+    <h1 class="display" id="hero-title">I build backend systems that stay <em>reliable at scale.</em></h1>
+    <p class="lede">Senior Software Engineer at Airtel Digital, designing high-throughput distributed systems, resilient services and data-intensive platforms powering millions of users.</p>
+    <p class="status"><i aria-hidden="true"></i>Open to backend and platform opportunities</p>
+    <div class="cta-row">
+      <a class="btn" href="#work">Read the case studies <span aria-hidden="true">&nbsp;→</span></a>
+      <a class="btn-link" href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Download resume</a>
     </div>
-    <ul class="links" aria-label="Profiles">
-      <li><a href="https://www.linkedin.com/in/ram-prasad-bidiyasar" rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="https://github.com/RamPrasadBidiyasar" rel="noopener noreferrer">GitHub</a></li>
-      <li><a href="https://leetcode.com/u/Ram_Prasad_Bidiyasar/" rel="noopener noreferrer">LeetCode</a></li>
-    </ul>
+    <p class="contact-links"><a class="text-link" href="https://www.linkedin.com/in/ram-prasad-bidiyasar" rel="noopener noreferrer">LinkedIn</a><a class="text-link" href="https://github.com/RamPrasadBidiyasar" rel="noopener noreferrer">GitHub</a><a class="text-link" href="mailto:ramprasad.mnit@gmail.com">ramprasad.mnit@gmail.com</a></p>
   </div>
-  <section class="glance" aria-labelledby="glance-title">
-    <h2 class="label" id="glance-title">At a glance</h2>
-    <dl>
-      <div><dt>Now</dt><dd>Senior Software Engineer, Airtel Digital (Xstream backend: OTT and IPTV)</dd></div>
-      <div><dt>Since</dt><dd>Oct 2023. Promoted to Senior in Jul 2025</dd></div>
-      <div><dt>Core stack</dt><dd>Java, Spring Boot and WebFlux, Kafka, ScyllaDB, Aerospike, Redis, GCP</dd></div>
-      <div><dt>Strengths</dt><dd>Ordering and consistency, failure isolation, performance under peak load</dd></div>
-      <div><dt>Based in</dt><dd>Gurugram, India</dd></div>
-    </dl>
-  </section>
+  <figure class="hero-fig">
+    <svg class="only-wide" viewBox="0 0 518 340" role="img" aria-label="Conceptual diagram: client events flow through an event service into Kafka and on to services. If Kafka is unavailable, events are held in a buffer and replayed by Kafka Connect.">
+      <defs>
+        <pattern id="hg" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="#E6DEC9" stroke-width="1"/></pattern>
+        <marker id="ha" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1F5A43"/></marker>
+        <marker id="hb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#A8481A"/></marker>
+      </defs>
+      <rect width="518" height="340" fill="url(#hg)"/>
+      <g fill="none" stroke-width="1.6">
+        <path d="M104 74H138" stroke="#1F5A43" marker-end="url(#ha)"/><path d="M242 74H276" stroke="#1F5A43" marker-end="url(#ha)"/><path d="M380 74H414" stroke="#1F5A43" marker-end="url(#ha)"/>
+        <path d="M190 100V218" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#hb)"/><path d="M242 244H276" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#hb)"/><path d="M328 218V102" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#hb)"/>
+      </g>
+      <g font-family="Instrument Sans, sans-serif" font-size="12.5" font-weight="600" text-anchor="middle">
+        <rect x="0" y="50" width="104" height="48" fill="#FFFFFF" stroke="#1C1B19"/><text x="52" y="79" fill="#1C1B19">Clients</text>
+        <rect x="138" y="50" width="104" height="48" fill="#FFFFFF" stroke="#1C1B19"/><text x="190" y="79" fill="#1C1B19">Event service</text>
+        <rect x="276" y="50" width="104" height="48" fill="#1C1B19"/><text x="328" y="79" fill="#F7F3EA">Kafka</text>
+        <rect x="414" y="50" width="104" height="48" fill="#FFFFFF" stroke="#1C1B19"/><text x="466" y="79" fill="#1C1B19">Services</text>
+        <rect x="138" y="220" width="104" height="48" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="4 3"/><text x="190" y="249" fill="#7A3512">Buffer</text>
+        <rect x="276" y="220" width="104" height="48" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="4 3"/><text x="328" y="249" fill="#7A3512">Kafka Connect</text>
+      </g>
+      <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#5E5A52"><text x="0" y="306">green: normal path</text><text x="0" y="324" fill="#A8481A">orange: only while Kafka is down</text></g>
+      <g font-family="Instrument Sans, sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#FFFFFF"><circle cx="121" cy="74" r="9" fill="#1F5A43"/><text x="121" y="78">1</text><circle cx="259" cy="74" r="9" fill="#1F5A43"/><text x="259" y="78">2</text><circle cx="397" cy="74" r="9" fill="#1F5A43"/><text x="397" y="78">3</text></g>
+    </svg>
+    <svg class="only-narrow" viewBox="0 0 330 250" role="img" aria-label="Conceptual diagram: clients send events to an event service, then Kafka, then services. If Kafka is down, events wait in a buffer and Kafka Connect replays them.">
+      <defs>
+        <marker id="ma" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1F5A43"/></marker>
+        <marker id="mb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#A8481A"/></marker>
+      </defs>
+      <g fill="none" stroke-width="1.6"><path d="M70 40V68" stroke="#1F5A43" marker-end="url(#ma)"/><path d="M70 110V138" stroke="#1F5A43" marker-end="url(#ma)"/><path d="M70 180V208" stroke="#1F5A43" marker-end="url(#ma)"/><path d="M140 90H188" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#mb)"/><path d="M260 110V138" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#mb)"/><path d="M190 160H142" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#mb)"/></g>
+      <g font-family="Instrument Sans, sans-serif" font-size="12.5" font-weight="600" text-anchor="middle">
+        <rect x="0" y="0" width="140" height="40" fill="#FFFFFF" stroke="#1C1B19"/><text x="70" y="25" fill="#1C1B19">Clients</text>
+        <rect x="0" y="70" width="140" height="40" fill="#FFFFFF" stroke="#1C1B19"/><text x="70" y="95" fill="#1C1B19">Event service</text>
+        <rect x="0" y="140" width="140" height="40" fill="#1C1B19"/><text x="70" y="165" fill="#F7F3EA">Kafka</text>
+        <rect x="0" y="210" width="140" height="40" fill="#FFFFFF" stroke="#1C1B19"/><text x="70" y="235" fill="#1C1B19">Services</text>
+        <rect x="190" y="70" width="140" height="40" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="4 3"/><text x="260" y="95" fill="#7A3512">Buffer</text>
+        <rect x="190" y="140" width="140" height="40" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="4 3"/><text x="260" y="165" fill="#7A3512">Kafka Connect</text>
+      </g>
+      <text x="190" y="205" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#A8481A">only while Kafka is down</text>
+    </svg>
+    <figcaption class="lab">Fig. 1 · Event flow · conceptual, not the production topology</figcaption>
+  </figure>
 </section>
 
-<!-- PROOF STRIP -->
-<section class="proof wrap" aria-label="Results at a glance">
-  <ul class="proof-grid">
-    <li><strong>10M+</strong><span>active users on IPTV playback routed by the multi-CDN engine I built</span></li>
-    <li><strong>80–90K/s</strong><span>events absorbed at live-match peaks by the rebuilt event service</span></li>
-    <li><strong>−75%</strong><span>p99 latency on watch-history reads, with about 4x per-instance throughput</span></li>
-    <li><strong>1% → 0.07%</strong><span>buffering after multi-CDN routing and failover</span></li>
-  </ul>
+<!-- IMPACT -->
+<section class="wrap" aria-labelledby="impact-title">
+  <div class="opener reveal" style="margin-top: 24px"><h2 class="lab" id="impact-title">01 · Impact</h2><span class="lab">Measured at Airtel Digital</span></div>
+  <div class="metrics-big reveal">
+    <div class="metric-big"><div class="num-xl">10M+</div><div class="metric-body"><p class="metric-name">active users on IPTV playback</p><p class="lab plain">Scope · playback routed by the multi-CDN engine</p></div></div>
+    <div class="metric-big"><div class="num-xl">80–90K<small>/s</small></div><div class="metric-body"><p class="metric-name">events per second at live-match peaks</p><p class="lab plain">Scope · the event ingestion service</p></div></div>
+  </div>
+  <div class="metrics-row reveal">
+    <div class="metric"><div class="num-l">~6x</div><div><p class="metric-name">throughput per pod</p><p class="lab plain">Scope · event service, about 400 → 2,500 req/s</p></div></div>
+    <div class="metric"><div class="num-l">−75%</div><div><p class="metric-name">p99 latency on watch-history reads</p><p class="lab plain">Scope · Watch Info v2, with about 4x throughput per instance</p></div></div>
+    <div class="metric"><div class="num-l fit">1% <span style="color: var(--graphite)">→</span> 0.07%</div><div><p class="metric-name">buffering rate</p><p class="lab plain">Scope · IPTV playback after multi-CDN routing and failover</p></div></div>
+  </div>
 </section>
 
 <!-- CASE STUDIES -->
-<section id="work" class="section wrap" aria-labelledby="work-title">
-  <div class="section-head">
-    <p class="label">Case studies</p>
-    <h2 id="work-title">Five systems, what I decided and why</h2>
-    <p class="muted">Each one: the problem, the high-level design with numbered request flow, the trade-offs, how it fails safely, and the measured result. Diagrams are conceptual and generalized; they are not the production topology.</p>
+<section class="wrap section" id="work" aria-labelledby="work-title">
+  <div class="opener"><span class="lab">02 · Case studies</span><span class="lab">Five systems, five ways of drawing them</span></div>
+  <h2 class="h2" id="work-title">Each system, shown the way it actually works</h2>
+  <div class="pv-grid">
+
+    <article class="pv pv-1 reveal">
+      <div class="pv-text">
+        <p class="lab green">01 · Ordering and data flow</p>
+        <h3>Continue Watching and Watch Info v2</h3>
+        <p>Per-user ordering for watch progress, and a fast read path. Kafka keeps one user's multi-device writes in order; reactive reads keep history fast.</p>
+        <div class="res"><div><span class="n">−70%</span><span class="l">sync latency</span></div><div><span class="n">−75%</span><span class="l">p99 on reads</span></div></div>
+        <a class="pv-link" href="case/continue-watching.html">Read the case study<span aria-hidden="true">→</span></a>
+      </div>
+      <div class="pv-art">
+        <svg class="only-wide" viewBox="0 0 640 300" role="img" aria-label="Conceptual illustration: writes from a phone, a TV and a web client arrive at different moments and are placed into one ordered sequence on a single partition keyed by user ID.">
+          <defs><marker id="p1a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1C1B19"/></marker></defs>
+          <g stroke="#B9B09A" stroke-width="1"><path d="M70 60H620"/><path d="M70 110H620"/><path d="M70 160H620"/></g>
+          <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#5E5A52"><text x="0" y="64">Phone</text><text x="0" y="114">TV</text><text x="0" y="164">Web</text></g>
+          <g stroke="#1F5A43" stroke-width="1.4" stroke-dasharray="2 4"><path d="M130 60V240"/><path d="M210 110V240"/><path d="M270 160V240"/><path d="M350 60V240"/><path d="M410 160V240"/><path d="M480 110V240"/></g>
+          <g fill="#1F5A43"><circle cx="130" cy="60" r="6"/><circle cx="350" cy="60" r="6"/><circle cx="210" cy="110" r="6"/><circle cx="480" cy="110" r="6"/><circle cx="270" cy="160" r="6"/><circle cx="410" cy="160" r="6"/></g>
+          <path d="M70 250H618" stroke="#1C1B19" stroke-width="2" marker-end="url(#p1a)"/>
+          <g font-family="Instrument Sans, sans-serif" font-size="12" font-weight="600" text-anchor="middle" fill="#FFFFFF"><circle cx="130" cy="250" r="11" fill="#1F5A43"/><text x="130" y="254">1</text><circle cx="210" cy="250" r="11" fill="#1F5A43"/><text x="210" y="254">2</text><circle cx="270" cy="250" r="11" fill="#1F5A43"/><text x="270" y="254">3</text><circle cx="350" cy="250" r="11" fill="#1F5A43"/><text x="350" y="254">4</text><circle cx="410" cy="250" r="11" fill="#1F5A43"/><text x="410" y="254">5</text><circle cx="480" cy="250" r="11" fill="#1F5A43"/><text x="480" y="254">6</text></g>
+          <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#5E5A52"><text x="70" y="284">one partition · key = user ID · one order</text><text x="70" y="20" fill="#1C1B19">devices write at the same time</text></g>
+        </svg>
+        <div class="only-narrow"><p class="chips" style="margin-bottom: 8px"><b class="k">1</b>—<b class="k">2</b>—<b class="k">3</b>—<b class="k">4</b></p><p class="lab plain">one user · one partition · one order</p></div>
+      </div>
+    </article>
+
+    <article class="pv pv-2 reveal">
+      <div class="pv-text">
+        <p class="lab green">02 · Routing and decisions</p>
+        <h3>Multi-CDN Routing</h3>
+        <p>The right CDN for every playback request, with a guaranteed fallback when no rule matches.</p>
+        <div class="res"><div><span class="n">10M+</span><span class="l">active users</span></div><div><span class="n">1% → 0.07%</span><span class="l">buffering</span></div></div>
+        <a class="pv-link" href="case/multi-cdn-routing.html">Read the case study<span aria-hidden="true">→</span></a>
+      </div>
+      <div class="pv-art">
+        <svg class="only-wide" viewBox="0 0 520 230" role="img" aria-label="Conceptual illustration: a request passes through filter, rank and pick steps to one of three CDNs. If no rule matches, a default-weight path leads to the pick step.">
+          <defs><marker id="p2a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1F5A43"/></marker><marker id="p2b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#A8481A"/></marker></defs>
+          <g fill="none" stroke-width="1.6"><path d="M74 108H96" stroke="#1F5A43" marker-end="url(#p2a)"/><path d="M170 108H192" stroke="#1F5A43" marker-end="url(#p2a)"/><path d="M266 108H288" stroke="#1F5A43" marker-end="url(#p2a)"/><path d="M362 100L408 38" stroke="#1F5A43" stroke-width="2.4" marker-end="url(#p2a)"/><path d="M362 108H408" stroke="#B9B09A"/><path d="M362 116L408 178" stroke="#B9B09A"/><path d="M133 126V172" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#p2b)"/><path d="M198 190H325V128" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#p2b)"/></g>
+          <g font-family="Instrument Sans, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+            <rect x="0" y="90" width="74" height="36" fill="#FFFFFF" stroke="#1C1B19"/><text x="37" y="113" fill="#1C1B19">Request</text>
+            <rect x="96" y="90" width="74" height="36" fill="#FFFFFF" stroke="#1C1B19"/><text x="133" y="113" fill="#1C1B19">Filter</text>
+            <rect x="192" y="90" width="74" height="36" fill="#FFFFFF" stroke="#1C1B19"/><text x="229" y="113" fill="#1C1B19">Rank</text>
+            <rect x="288" y="90" width="74" height="36" fill="#1C1B19"/><text x="325" y="113" fill="#F7F3EA">Pick</text>
+            <rect x="410" y="20" width="100" height="36" fill="#1F5A43"/><text x="460" y="43" fill="#FFFFFF">CDN A</text>
+            <rect x="410" y="90" width="100" height="36" fill="#FFFFFF" stroke="#B9B09A"/><text x="460" y="113" fill="#5E5A52">CDN B</text>
+            <rect x="410" y="160" width="100" height="36" fill="#FFFFFF" stroke="#B9B09A"/><text x="460" y="183" fill="#5E5A52">CDN C</text>
+            <rect x="60" y="172" width="138" height="36" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="4 3"/><text x="129" y="195" fill="#7A3512">Default weights</text>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#A8481A"><text x="146" y="152">no match</text><text x="212" y="218">or selection fails</text></g>
+        </svg>
+        <div class="only-narrow"><p class="chips"><b>Request</b>→<b>Filter</b>→<b>Rank</b>→<b class="k">Pick</b></p><p class="chips" style="margin-top: 8px"><b class="f">no match → default weights</b></p></div>
+      </div>
+    </article>
+
+    <article class="pv pv-3 on-dark reveal">
+      <p class="lab">03 · Throughput and recovery</p>
+      <h3>Event Ingestion at Live-Match Scale</h3>
+      <p>Survives match-day peaks and a Kafka outage: events are buffered, then replayed.</p>
+      <svg class="only-wide" viewBox="0 0 400 190" role="img" aria-label="Bars compare event-service throughput per pod, about 400 requests per second before and about 2,500 after. Below, an illustrative strip shows Kafka up, an outage with events buffered, and replay." style="width: 100%; height: auto">
+        <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#B9B3A4"><text x="0" y="16">per pod, before</text><text x="0" y="68">per pod, after</text></g>
+        <rect x="0" y="24" width="48" height="24" fill="#B9B3A4"/><text x="58" y="41" font-family="IBM Plex Mono, monospace" font-size="12" fill="#F7F3EA">~400 req/s</text>
+        <rect x="0" y="76" width="300" height="24" fill="#8FC9AB"/><text x="308" y="93" font-family="IBM Plex Mono, monospace" font-size="12" fill="#F7F3EA">~2,500</text>
+        <rect x="0" y="136" width="150" height="20" fill="#8FC9AB"/><rect x="150" y="136" width="100" height="20" fill="#E0905F"/><rect x="250" y="136" width="150" height="20" fill="#8FC9AB"/>
+        <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#B9B3A4"><text x="0" y="176">Kafka up</text><text x="150" y="176">down · buffered</text><text x="268" y="176">replayed</text><text x="0" y="124" fill="#F7F3EA">Recovery, illustrative</text></g>
+      </svg>
+      <div class="only-narrow"><div class="bar s"></div><div class="bar" style="margin-top: 6px"></div><p class="lab plain" style="margin-top: 6px">~400 → ~2,500 req/s per pod</p><div class="strip" style="margin-top: 12px"><span></span><span></span><span></span></div><p class="lab plain" style="margin-top: 6px">Kafka up · down, buffered · replayed (illustrative)</p></div>
+      <div class="res"><div><span class="n">~6x</span><span class="l">per pod</span></div><div><span class="n">80–90K/s</span><span class="l">at peak</span></div></div>
+      <a class="pv-link" href="case/event-ingestion.html">Read the case study<span aria-hidden="true">→</span></a>
+    </article>
+
+    <article class="pv pv-4 reveal">
+      <p class="lab green">04 · Concurrency and atomic limits</p>
+      <h3>IPTV Session Service</h3>
+      <p>One device at a time. Two logins at the same moment cannot both succeed.</p>
+      <svg class="only-wide" viewBox="0 0 380 190" role="img" aria-label="Conceptual illustration: two simultaneous logins reach a device-limit gate. One passes to a session; the other is rejected." style="width: 100%; height: auto">
+        <defs><marker id="p4a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1F5A43"/></marker><marker id="p4b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#A8481A"/></marker></defs>
+        <g fill="none" stroke-width="1.6"><path d="M90 46L148 82" stroke="#1F5A43" marker-end="url(#p4a)"/><path d="M90 144L148 108" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#p4b)"/><path d="M212 95H266" stroke="#1F5A43" stroke-width="2.4" marker-end="url(#p4a)"/></g>
+        <g font-family="Instrument Sans, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+          <rect x="0" y="28" width="90" height="34" fill="#FFFFFF" stroke="#1C1B19"/><text x="45" y="50" fill="#1C1B19">Login A</text>
+          <rect x="0" y="128" width="90" height="34" fill="#FFFFFF" stroke="#1C1B19"/><text x="45" y="150" fill="#1C1B19">Login B</text>
+          <rect x="150" y="62" width="62" height="66" fill="#1C1B19"/><text x="181" y="92" fill="#F7F3EA">atomic</text><text x="181" y="108" fill="#F7F3EA">limit</text>
+          <rect x="268" y="76" width="100" height="38" fill="#E1ECE3" stroke="#1F5A43"/><text x="318" y="100" fill="#1F5A43">Session</text>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="10.5"><text x="0" y="14" fill="#5E5A52">same moment</text><text x="160" y="178" fill="#A8481A">rejected</text></g>
+      </svg>
+      <div class="only-narrow"><p class="chips"><b>Login A</b><b>Login B</b>→<b class="q">atomic limit</b>→<b class="k">1 session</b></p></div>
+      <div class="res"><div><span class="n">Atomic</span><span class="l">device limit</span></div><div><span class="n">Multi-zone</span><span class="l">Aerospike storage</span></div></div>
+      <a class="pv-link" href="case/iptv-session-service.html">Read the case study<span aria-hidden="true">→</span></a>
+    </article>
+
+    <article class="pv pv-5 reveal">
+      <div class="pv-text">
+        <p class="lab green">05 · Fault isolation and fallback</p>
+        <h3>Resilient Home</h3>
+        <p>Keep the home screen open when something behind it breaks.</p>
+        <div class="res"><div><span class="n">30 → 100</span><span class="l">TPS, page generation</span></div><div><span class="n">~30%</span><span class="l">lower latency</span></div></div>
+        <a class="pv-link" href="case/resilient-home.html">Read the case study<span aria-hidden="true">→</span></a>
+      </div>
+      <div class="pv-art">
+        <svg class="only-wide" viewBox="0 0 520 230" role="img" aria-label="Conceptual illustration: primary content is tried first, then a fallback retry, then static layouts. Separately, a slow dependency stays inside one of three isolated thread pools.">
+          <defs><marker id="p5b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#A8481A"/></marker></defs>
+          <g fill="none" stroke="#A8481A" stroke-width="1.6" stroke-dasharray="5 4"><path d="M130 62V92" marker-end="url(#p5b)"/><path d="M130 134V164" marker-end="url(#p5b)"/></g>
+          <g font-family="Instrument Sans, sans-serif" font-size="12.5" font-weight="600" text-anchor="middle">
+            <rect x="0" y="20" width="260" height="42" fill="#1F5A43"/><text x="130" y="46" fill="#FFFFFF">1 · Primary content</text>
+            <rect x="0" y="92" width="260" height="42" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="4 3"/><text x="130" y="118" fill="#7A3512">2 · Fallback retry (kill switch)</text>
+            <rect x="0" y="164" width="260" height="42" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="1.5 3"/><text x="130" y="190" fill="#7A3512">3 · Static layouts</text>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#A8481A"><text x="140" y="82">fetch fails</text><text x="140" y="154">CDN fails</text></g>
+          <rect x="318" y="62" width="58" height="96" fill="#FFFFFF" stroke="#1F5A43"/><rect x="382" y="62" width="58" height="96" fill="#F6E4D6" stroke="#A8481A"/><rect x="446" y="62" width="58" height="96" fill="#FFFFFF" stroke="#1F5A43"/>
+          <g font-family="IBM Plex Mono, monospace" font-size="10.5" text-anchor="middle" fill="#1C1B19"><text x="347" y="114">pool A</text><text x="411" y="114" fill="#7A3512">pool B</text><text x="475" y="114">pool C</text><text x="411" y="132" fill="#A8481A">slow</text></g>
+          <text x="318" y="190" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#3F4A43">a slow call stays in its pool</text>
+        </svg>
+        <div class="only-narrow tiers"><span style="background: var(--forest); color: #fff">1 · Primary content</span><span style="background: var(--ember-tint); border: 1px dashed var(--ember); color: var(--ember-ink)">2 · Fallback retry</span><span style="background: var(--ember-tint); border: 1px dotted var(--ember); color: var(--ember-ink)">3 · Static layouts</span></div>
+      </div>
+    </article>
   </div>
-
-  <ol class="case-index" aria-label="Case study index">
-    <li><a href="#case-watch"><span class="n">01</span><strong>Continue Watching</strong><em>−70% sync latency · −75% p99</em></a></li>
-    <li><a href="#case-cdn"><span class="n">02</span><strong>Multi-CDN routing</strong><em>10M+ users · buffering 1% → 0.07%</em></a></li>
-    <li><a href="#case-events"><span class="n">03</span><strong>Event ingestion</strong><em>400 → 2,500 req/s per pod</em></a></li>
-    <li><a href="#case-session"><span class="n">04</span><strong>Session service</strong><em>atomic device limit, multi-zone</em></a></li>
-    <li><a href="#case-resilience"><span class="n">05</span><strong>Resilient Home</strong><em>30 → 100 TPS, fails safely</em></a></li>
-  </ol>
-
-  <!-- 1 -->
-  <article class="case" id="case-watch">
-    <div class="case-text">
-      <p class="label">01 · Continue Watching and Watch Info v2</p>
-      <h3>Per-user ordering for watch progress, and a fast read path</h3>
-      <ul class="metrics" aria-label="Key results"><li><b>−70%</b> sync latency</li><li><b>−75%</b> p99 on reads</li><li><b>~4x</b> throughput per instance</li></ul>
-      <p class="problem"><strong>Problem.</strong> Continue-watching and history serve both the Xstream app and the IPTV app at high volume. One user can watch on several devices and write at the same time, so ordering and consistency mattered, and reads had to stay fast.</p>
-      <ul class="decisions">
-        <li><strong>Serialize writes with Kafka.</strong> Watch events are keyed by user ID, so one user's concurrent and multi-device writes arrive in order. A consumer writes them to ScyllaDB. The trade-off is asynchronous persistence, covered by a local fallback.</li>
-        <li><strong>Separate data models per product.</strong> Xstream and IPTV have their own continue-watching storage, with table-level compaction tuned for it, and a dual-write migration from the old tables.</li>
-        <li><strong>Cache by bucket.</strong> Redis and Aerospike caches are scoped per bucket, with bucket-wise diff-sync merge and LRU eviction in the app.</li>
-        <li><strong>Reactive reads.</strong> Watch Info v2 serves continue-watching, history and favourites through one contract on Spring WebFlux and reactive ScyllaDB, with independent loaders so one slow section does not hold up the others. Later extended to live TV and microdrama.</li>
-      </ul>
-      <p class="result"><strong>Result.</strong> Sync latency down by nearly 70%. Watch-history p99 down 75%, with about 4x throughput per instance.</p>
-      <ul class="tags" aria-label="Technologies"><li>Kafka</li><li>ScyllaDB</li><li>Redis</li><li>Aerospike</li><li>Spring WebFlux</li></ul>
-    </div>
-    <figure class="diagram">
-      <figcaption class="dtitle">High-level design: writes 1–4, reads 5–7</figcaption>
-      <svg viewBox="0 0 420 290" role="img" aria-labelledby="d1t d1d">
-        <title id="d1t">Continue Watching write and read paths</title>
-        <desc id="d1d">Writes go from client apps through a sync API into Kafka, keyed by user ID, then a writer stores them in ScyllaDB. Reads go from ScyllaDB through a bucket cache to the Watch Info v2 API and back to the clients.</desc>
-        <defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
-        <g class="arrows" marker-end="url(#a1)">
-          <path d="M104 34H158"/><path d="M262 34H316"/><path d="M368 58V120"/><path d="M316 144H262"/>
-          <path d="M210 168V230"/><path d="M158 254H104"/><path d="M52 230V58"/>
-        </g>
-        <g class="node"><rect x="0" y="10" width="104" height="48" rx="8"/><text x="52" y="30">Client apps</text><text x="52" y="46" class="sub">Xstream · IPTV</text></g>
-        <g class="node"><rect x="158" y="10" width="104" height="48" rx="8"/><text x="210" y="38">Sync API</text></g>
-        <g class="node accent"><rect x="316" y="10" width="104" height="48" rx="8"/><text x="368" y="30">Kafka</text><text x="368" y="46" class="sub">key = user ID</text></g>
-        <g class="node"><rect x="316" y="120" width="104" height="48" rx="8"/><text x="368" y="148">Writer</text></g>
-        <g class="node accent"><rect x="158" y="120" width="104" height="48" rx="8"/><text x="210" y="140">ScyllaDB</text><text x="210" y="156" class="sub">per product</text></g>
-        <g class="node"><rect x="158" y="230" width="104" height="48" rx="8"/><text x="210" y="250">Bucket cache</text><text x="210" y="266" class="sub">Redis/Aerospike</text></g>
-        <g class="node accent"><rect x="0" y="230" width="104" height="48" rx="8"/><text x="52" y="250">Watch Info v2</text><text x="52" y="266" class="sub">reactive reads</text></g>
-        <text x="352" y="93" class="note note-end">per-user order</text>
-        <g class="badge"><circle cx="131" cy="34" r="9"/><text x="131" y="38">1</text></g>
-        <g class="badge"><circle cx="289" cy="34" r="9"/><text x="289" y="38">2</text></g>
-        <g class="badge"><circle cx="368" cy="89" r="9"/><text x="368" y="93">3</text></g>
-        <g class="badge"><circle cx="289" cy="144" r="9"/><text x="289" y="148">4</text></g>
-        <g class="badge"><circle cx="210" cy="199" r="9"/><text x="210" y="203">5</text></g>
-        <g class="badge"><circle cx="131" cy="254" r="9"/><text x="131" y="258">6</text></g>
-        <g class="badge"><circle cx="52" cy="144" r="9"/><text x="52" y="148">7</text></g>
-      </svg>
-      <ol class="flow">
-        <li>The app sends a watch event to the sync API.</li>
-        <li>The sync API publishes it to Kafka, keyed by user ID.</li>
-        <li>Kafka keeps that user's events in order.</li>
-        <li>A writer stores them in ScyllaDB, in separate Xstream and IPTV models.</li>
-        <li>Reads go through a bucket-scoped cache over ScyllaDB.</li>
-        <li>Watch Info v2 loads continue-watching, history and favourites in parallel.</li>
-        <li>The client gets one response.</li>
-      </ol>
-      <p class="fail"><strong>Failure handling.</strong> Each read section has its own timeout and an empty-page fallback, so one slow section does not block the others. Asynchronous persistence is covered by a local fallback.</p>
-      <p class="legend"><span class="sw sw-acc"></span>Core of the design <span class="badge-key">1</span>Step order</p>
-    </figure>
-  </article>
-
-  <!-- 2 -->
-  <article class="case flip" id="case-cdn">
-    <div class="case-text">
-      <p class="label">02 · Multi-CDN routing and failover</p>
-      <h3>Choosing the right CDN for every playback request</h3>
-      <ul class="metrics" aria-label="Key results"><li><b>10M+</b> active users</li><li><b>1% → 0.07%</b> buffering</li></ul>
-      <p class="problem"><strong>Problem.</strong> IPTV playback needed each request sent to the best CDN as geography, load and CDN health change, and needed to keep playing when a CDN degrades.</p>
-      <ul class="decisions">
-        <li><strong>Rules as configuration.</strong> Routing rules are stored in MongoDB and evaluated per request over geography, user, channel, priority, weights and CDN health. The trade-off is a rule engine that needs its own testing and change history.</li>
-        <li><strong>Filter, then sort.</strong> A filter engine removes ineligible CDNs, a sort engine orders the rest, and a rule-evaluation engine applies priorities. Rule storage, access and sync mechanisms keep the rules available to the playback service.</li>
-        <li><strong>Always have an answer.</strong> If no rule matches or selection fails, the request falls back to stream options ordered by default weight. A priority-CDN override gives operators manual control, and fallback decisions are recorded.</li>
-      </ul>
-      <p class="result"><strong>Result.</strong> Playback for 10M+ active users, with buffering reduced from 1% to 0.07%.</p>
-      <ul class="tags" aria-label="Technologies"><li>Java</li><li>Spring Boot</li><li>MongoDB</li><li>SpEL rules</li></ul>
-    </div>
-    <figure class="diagram">
-      <figcaption class="dtitle">High-level design: per-request CDN selection</figcaption>
-      <svg viewBox="0 0 420 290" role="img" aria-labelledby="d2t d2d">
-        <title id="d2t">Multi-CDN request routing</title>
-        <desc id="d2d">A playback request goes to a rule engine configured from a rule store. The engine picks among three CDNs ranked primary, fallback and ready, and falls back to default weights when no rule matches.</desc>
-        <defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
-        <g class="arrows" marker-end="url(#a2)">
-          <path d="M104 124H158"/><path d="M210 58V100"/><path d="M210 148V190" class="dash"/>
-          <path d="M262 116L316 42"/><path d="M262 124H316"/><path d="M262 132L316 206"/>
-        </g>
-        <g class="node"><rect x="0" y="100" width="104" height="48" rx="8"/><text x="52" y="120">Playback</text><text x="52" y="136" class="sub">request</text></g>
-        <g class="node"><rect x="158" y="10" width="104" height="48" rx="8"/><text x="210" y="30">Rule store</text><text x="210" y="46" class="sub">MongoDB</text></g>
-        <g class="node accent"><rect x="158" y="100" width="104" height="48" rx="8"/><text x="210" y="120">Rule engine</text><text x="210" y="136" class="sub">filter · sort</text></g>
-        <g class="node"><rect x="158" y="190" width="104" height="48" rx="8"/><text x="210" y="210">Default order</text><text x="210" y="226" class="sub">no match</text></g>
-        <g class="node"><rect x="316" y="14" width="104" height="48" rx="8"/><text x="368" y="34">CDN A</text><text x="368" y="50" class="sub">primary</text></g>
-        <g class="node"><rect x="316" y="100" width="104" height="48" rx="8"/><text x="368" y="120">CDN B</text><text x="368" y="136" class="sub">fallback</text></g>
-        <g class="node"><rect x="316" y="190" width="104" height="48" rx="8"/><text x="368" y="210">CDN C</text><text x="368" y="226" class="sub">ready</text></g>
-        <g class="badge"><circle cx="131" cy="124" r="9"/><text x="131" y="128">1</text></g>
-        <g class="badge"><circle cx="210" cy="79" r="9"/><text x="210" y="83">2</text></g>
-        <g class="badge"><circle cx="289" cy="124" r="9"/><text x="289" y="128">3</text></g>
-        <g class="badge"><circle cx="210" cy="169" r="9"/><text x="210" y="173">4</text></g>
-        <text x="210" y="272" class="note">geography, priority, weights, health</text>
-      </svg>
-      <ol class="flow">
-        <li>A playback request arrives with its context: geography, user, channel.</li>
-        <li>The rule engine reads the routing rules from the MongoDB-backed store.</li>
-        <li>It filters out ineligible CDNs, sorts the rest by priority, weights and health, and picks one.</li>
-        <li>If no rule matches or selection fails, it uses the default-weight order.</li>
-      </ol>
-      <p class="fail"><strong>Failure handling.</strong> Selection always returns an answer. Operators can force a priority CDN, and each fallback decision is recorded for review.</p>
-      <p class="legend"><span class="sw sw-solid"></span>Normal path <span class="sw sw-dash"></span>Fallback path <span class="sw sw-acc"></span>Core of the design</p>
-    </figure>
-  </article>
-
-  <!-- 3 -->
-  <article class="case" id="case-events">
-    <div class="case-text">
-      <p class="label">03 · Event ingestion at live-match scale</p>
-      <h3>An event service that survives peaks and a Kafka outage</h3>
-      <ul class="metrics" aria-label="Key results"><li><b>~6x</b> per-pod throughput</li><li><b>400 → 2,500</b> req/s per pod</li><li><b>80–90K</b> events/s peak</li></ul>
-      <p class="problem"><strong>Problem.</strong> Playback events arrive in bursts during big live matches, about 80–90K per second. A spike or fault in one product should not take down the other, and events should not be lost if Kafka is unavailable.</p>
-      <ul class="decisions">
-        <li><strong>Shorter request path.</strong> The service, rebuilt on Java 25, sends events straight to Kafka, with the extra queue in front of the producer removed and less logging on the request path. One pod went from about 400 to about 2,500 requests per second, roughly 6x.</li>
-        <li><strong>Isolate the products.</strong> Xstream and IPTV each have their own event service, Kafka cluster and deployment, so a spike or fault stays inside one product and each scales independently.</li>
-        <li><strong>Tier the topics.</strong> Critical events and routine watch events use different topics with different retention and replication.</li>
-        <li><strong>Buffer when Kafka is down.</strong> Events are still accepted, held through Cloud Run and Pub/Sub, and replayed into Kafka by Kafka Connect on recovery. The trade-off, documented for the team: the buffered path cannot separate critical from routine events.</li>
-      </ul>
-      <p class="result"><strong>Result.</strong> About 6x per-pod throughput, peak load absorbed without cross-product impact, and events buffered rather than lost during Kafka outages.</p>
-      <ul class="tags" aria-label="Technologies"><li>Java 25</li><li>Kafka</li><li>Kafka Connect</li><li>Pub/Sub</li><li>Cloud Run</li></ul>
-    </div>
-    <figure class="diagram">
-      <figcaption class="dtitle">High-level design: normal 1–2, buffered 3–5</figcaption>
-      <svg viewBox="0 0 420 290" role="img" aria-labelledby="d3t d3d">
-        <title id="d3t">Event ingestion with buffering during a Kafka outage</title>
-        <desc id="d3d">Client events flow to an event service and then into Kafka with separate critical and routine topics. If Kafka is unavailable, events are held in a Pub/Sub buffer and replayed into Kafka by Kafka Connect. Xstream and IPTV run as separate stacks.</desc>
-        <defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
-        <g class="arrows" marker-end="url(#a3)">
-          <path d="M104 34H158"/><path d="M262 34H316"/>
-          <path d="M210 58V120" class="dash"/><path d="M262 144H316" class="dash"/><path d="M368 120V58" class="dash"/>
-        </g>
-        <g class="node"><rect x="0" y="10" width="104" height="48" rx="8"/><text x="52" y="30">Client events</text><text x="52" y="46" class="sub">80–90K/s peak</text></g>
-        <g class="node accent"><rect x="158" y="10" width="104" height="48" rx="8"/><text x="210" y="30">Event service</text><text x="210" y="46" class="sub">Java 25</text></g>
-        <g class="node accent"><rect x="316" y="10" width="104" height="48" rx="8"/><text x="368" y="30">Kafka</text><text x="368" y="46" class="sub">tiered topics</text></g>
-        <g class="node"><rect x="158" y="120" width="104" height="48" rx="8"/><text x="210" y="140">Pub/Sub buffer</text><text x="210" y="156" class="sub">Kafka is down</text></g>
-        <g class="node"><rect x="316" y="120" width="104" height="48" rx="8"/><text x="368" y="140">Kafka Connect</text><text x="368" y="156" class="sub">replay</text></g>
-        <rect x="0" y="208" width="200" height="64" rx="8" class="zone"/><text x="100" y="236">Xstream stack</text><text x="100" y="254" class="sub">own service · Kafka · deploy</text>
-        <rect x="220" y="208" width="200" height="64" rx="8" class="zone"/><text x="320" y="236">IPTV stack</text><text x="320" y="254" class="sub">own service · Kafka · deploy</text>
-        <g class="badge"><circle cx="131" cy="34" r="9"/><text x="131" y="38">1</text></g>
-        <g class="badge"><circle cx="289" cy="34" r="9"/><text x="289" y="38">2</text></g>
-        <g class="badge"><circle cx="210" cy="89" r="9"/><text x="210" y="93">3</text></g>
-        <g class="badge"><circle cx="289" cy="144" r="9"/><text x="289" y="148">4</text></g>
-        <g class="badge"><circle cx="368" cy="89" r="9"/><text x="368" y="93">5</text></g>
-      </svg>
-      <ol class="flow">
-        <li>Client apps send playback events to the event service.</li>
-        <li>The service writes straight to Kafka, using critical and routine topics.</li>
-        <li>If Kafka is unavailable, events are still accepted and held in a Pub/Sub buffer.</li>
-        <li>Kafka Connect reads the buffer once Kafka is back.</li>
-        <li>It replays the events into Kafka, where other services keep reading the same topics.</li>
-      </ol>
-      <p class="fail"><strong>Failure handling.</strong> Xstream and IPTV each run their own stack, so a spike or fault stays in one product. A Kafka outage buffers events instead of losing them.</p>
-      <p class="legend"><span class="sw sw-solid"></span>Normal path <span class="sw sw-dash"></span>Only while Kafka is down <span class="sw sw-acc"></span>Core of the design</p>
-    </figure>
-  </article>
-
-  <!-- 4 -->
-  <article class="case flip" id="case-session">
-    <div class="case-text">
-      <p class="label">04 · IPTV session service</p>
-      <h3>One device at a time, without a single point of failure</h3>
-      <ul class="metrics" aria-label="Key properties"><li><b>Atomic</b> device limit</li><li><b>Multi-zone</b> Aerospike</li><li><b>1 SDK</b> for playback and SMS</li></ul>
-      <p class="problem"><strong>Problem.</strong> IPTV needed to limit how many devices can watch at once, and to keep playback tied to the device that logged in, while traffic grew and a zone could fail.</p>
-      <ul class="decisions">
-        <li><strong>Sessions tied to a device.</strong> A login creates a session. The token is opaque and bound to that device, and playback checks it while the user watches.</li>
-        <li><strong>An atomic limit.</strong> The concurrent-device limit is configurable and enforced atomically, so two logins at the same moment cannot both succeed.</li>
-        <li><strong>Multi-zone storage.</strong> Sessions live in multi-zone Aerospike, so the service keeps running if one zone has a problem. Login still works when the set-top-box details call fails.</li>
-        <li><strong>Reusable validation.</strong> A shared client SDK lets the playback and SMS services validate tokens the same way, so there is one place to change the rules.</li>
-      </ul>
-      <p class="result"><strong>Result.</strong> IPTV login and device-level playback are handled by one service that scales with traffic and tolerates a zone failure.</p>
-      <ul class="tags" aria-label="Technologies"><li>Java 21</li><li>Spring Boot</li><li>Aerospike</li><li>SDK design</li></ul>
-    </div>
-    <figure class="diagram">
-      <figcaption class="dtitle">High-level design: login 1–2, validation 3</figcaption>
-      <svg viewBox="0 0 420 290" role="img" aria-labelledby="d4t d4d">
-        <title id="d4t">IPTV session service</title>
-        <desc id="d4d">A login request goes to the session service, which stores sessions in Aerospike spread across three zones. Playback and SMS services validate the device-bound token with a shared SDK.</desc>
-        <defs><marker id="a4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
-        <g class="arrows" marker-end="url(#a4)">
-          <path d="M104 34H158"/><path d="M262 34H316"/><path d="M210 182V58"/>
-        </g>
-        <g class="arrows"><path d="M368 58V86"/></g>
-        <g class="node"><rect x="0" y="10" width="104" height="48" rx="8"/><text x="52" y="30">Login</text><text x="52" y="46" class="sub">set-top box</text></g>
-        <g class="node accent"><rect x="158" y="10" width="104" height="48" rx="8"/><text x="210" y="30">Session service</text><text x="210" y="46" class="sub">atomic limit</text></g>
-        <g class="node accent"><rect x="316" y="10" width="104" height="48" rx="8"/><text x="368" y="30">Aerospike</text><text x="368" y="46" class="sub">multi-zone</text></g>
-        <g class="node"><rect x="316" y="86" width="32" height="34" rx="6"/><text x="332" y="107" class="sub">A</text></g>
-        <g class="node"><rect x="354" y="86" width="32" height="34" rx="6"/><text x="370" y="107" class="sub">B</text></g>
-        <g class="node"><rect x="392" y="86" width="28" height="34" rx="6"/><text x="406" y="107" class="sub">C</text></g>
-        <text x="414" y="144" class="note note-end">replicated across 3 zones</text>
-        <g class="node"><rect x="0" y="182" width="262" height="56" rx="8"/><text x="131" y="204">Playback and SMS services</text><text x="131" y="222" class="sub">validate tokens via shared SDK</text></g>
-        <g class="badge"><circle cx="131" cy="34" r="9"/><text x="131" y="38">1</text></g>
-        <g class="badge"><circle cx="289" cy="34" r="9"/><text x="289" y="38">2</text></g>
-        <g class="badge"><circle cx="210" cy="120" r="9"/><text x="210" y="124">3</text></g>
-        <text x="210" y="272" class="note">same token rules everywhere</text>
-      </svg>
-      <ol class="flow">
-        <li>A set-top box logs in; the session service creates a session and a device-bound opaque token.</li>
-        <li>The session is stored in multi-zone Aerospike, and the concurrent-device limit is checked atomically.</li>
-        <li>Playback and SMS services validate the token through one shared SDK.</li>
-      </ol>
-      <p class="fail"><strong>Failure handling.</strong> If one zone has a problem the service keeps running on the others, and login still works when the set-top-box details call fails.</p>
-      <p class="legend"><span class="sw sw-solid"></span>Request path <span class="sw sw-acc"></span>Core of the design</p>
-    </figure>
-  </article>
-
-  <!-- 5 -->
-  <article class="case" id="case-resilience">
-    <div class="case-text">
-      <p class="label">05 · Resilient Home and layout service</p>
-      <h3>Keep the home screen open when something behind it breaks</h3>
-      <ul class="metrics" aria-label="Key results"><li><b>~99%</b> availability</li><li><b>30 → 100</b> TPS page generation</li><li><b>~30%</b> lower latency</li></ul>
-      <p class="problem"><strong>Problem.</strong> The home and layout service depends on content sources and a CDN. If one is slow or down, the home page should still open, and a slow downstream call should not exhaust the service's threads.</p>
-      <ul class="decisions">
-        <li><strong>Fallback with a kill switch.</strong> When the primary content fetch fails, the service retries against a fallback source. A kill switch turns that off, and a response header says when fallback content was served, so operators can see it.</li>
-        <li><strong>CDN failover at the gateway.</strong> If the layout CDN fails, the gateway serves static layouts instead of an error. The trade-off is that static layouts are less personalized, which is acceptable for a degraded mode.</li>
-        <li><strong>Protect the thread pool.</strong> Fixed thread-pool exhaustion under slow downstream calls, so a slow dependency cannot take down the whole service.</li>
-        <li><strong>Faster generation.</strong> Personalized page generation went from 30 to 100 TPS, with about 30% lower latency, using Java 21, gRPC, thread-pool tuning and parallel asynchronous calls.</li>
-      </ul>
-      <p class="result"><strong>Result.</strong> Availability is now about 99%, replacing 3–4 spikes a day and 10–15 minute failures during big events (3–4 times a year). Page generation scales to roughly 3x the previous throughput.</p>
-      <ul class="tags" aria-label="Technologies"><li>Java 21</li><li>gRPC</li><li>Spring Boot</li><li>Envoy</li></ul>
-    </div>
-    <figure class="diagram">
-      <figcaption class="dtitle">High-level design: normal 1–3, degraded 4–5</figcaption>
-      <svg viewBox="0 0 420 290" role="img" aria-labelledby="d5t d5d">
-        <title id="d5t">Layout service degradation paths</title>
-        <desc id="d5d">A client request passes through the gateway to the layout service, which reads from the primary content source. If that fails, a fallback source is used, and if the CDN fails the gateway serves static layouts.</desc>
-        <defs><marker id="a5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
-        <g class="arrows" marker-end="url(#a5)">
-          <path d="M104 34H158"/><path d="M262 34H316"/><path d="M368 58V120"/>
-          <path d="M316 144H262" class="dash"/><path d="M184 58L52 120" class="dash"/>
-        </g>
-        <g class="node"><rect x="0" y="10" width="104" height="48" rx="8"/><text x="52" y="38">Client</text></g>
-        <g class="node accent"><rect x="158" y="10" width="104" height="48" rx="8"/><text x="210" y="30">Gateway</text><text x="210" y="46" class="sub">CDN failover</text></g>
-        <g class="node accent"><rect x="316" y="10" width="104" height="48" rx="8"/><text x="368" y="30">Layout service</text><text x="368" y="46" class="sub">isolated pools</text></g>
-        <g class="node"><rect x="316" y="120" width="104" height="48" rx="8"/><text x="368" y="140">Content source</text><text x="368" y="156" class="sub">primary</text></g>
-        <g class="node"><rect x="158" y="120" width="104" height="48" rx="8"/><text x="210" y="140">Fallback</text><text x="210" y="156" class="sub">kill switch</text></g>
-        <g class="node"><rect x="0" y="120" width="104" height="48" rx="8"/><text x="52" y="140">Static layouts</text><text x="52" y="156" class="sub">degraded mode</text></g>
-        <g class="badge"><circle cx="131" cy="34" r="9"/><text x="131" y="38">1</text></g>
-        <g class="badge"><circle cx="289" cy="34" r="9"/><text x="289" y="38">2</text></g>
-        <g class="badge"><circle cx="368" cy="89" r="9"/><text x="368" y="93">3</text></g>
-        <g class="badge"><circle cx="289" cy="144" r="9"/><text x="289" y="148">4</text></g>
-        <g class="badge"><circle cx="118" cy="89" r="9"/><text x="118" y="93">5</text></g>
-        <text x="210" y="214" class="note">dashed paths run only during a failure</text>
-      </svg>
-      <ol class="flow">
-        <li>A client request reaches the gateway.</li>
-        <li>The gateway forwards it to the layout service, which runs its dependency calls in isolated thread pools.</li>
-        <li>The service reads the primary content source.</li>
-        <li>If that fetch fails, it retries against a fallback source; a kill switch can disable this, and a response header marks fallback content.</li>
-        <li>If the layout CDN fails, the gateway serves static layouts instead of an error.</li>
-      </ol>
-      <p class="fail"><strong>Failure handling.</strong> Three layers: fallback retry, static-layout failover, and thread-pool isolation, so a slow or failing dependency degrades the page instead of breaking it.</p>
-      <p class="legend"><span class="sw sw-solid"></span>Normal path <span class="sw sw-dash"></span>Only during a failure <span class="sw sw-acc"></span>Core of the design</p>
-    </figure>
-  </article>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section wrap" aria-labelledby="exp-title">
-  <div class="section-head">
-    <p class="label">Experience</p>
-    <h2 id="exp-title">Airtel Digital, Gurugram</h2>
+<section class="wrap section" id="experience" aria-labelledby="exp-title">
+  <div class="opener"><span class="lab">03 · Experience</span><span class="lab">Airtel Digital · Gurugram, India</span></div>
+  <h2 class="h2" id="exp-title">Two years of ownership, <em>end to end</em></h2>
+  <div class="role reveal">
+    <div class="role-meta"><p class="when">Jul 2025 – present</p><p class="title">Senior Software Engineer</p><p class="team">Xstream backend</p></div>
+    <div class="rail now">
+      <div class="win"><span class="hl">−70%</span><span class="tx">Redesigned <b>Continue Watching</b> from scratch, with Kafka-ordered writes. Sync latency fell by nearly 70%.</span></div>
+      <div class="win"><span class="hl">6x</span><span class="tx">Rebuilt the <b>event ingestion service</b> on Java 25: about 400 to 2,500 requests per second per pod.</span></div>
+      <div class="win"><span class="hl">10M+</span><span class="tx">Built <b>multi-CDN routing</b> for IPTV playback, cutting buffering from 1% to 0.07%.</span></div>
+      <p class="also">Also designed the IPTV session service, and took over the UCLM campaign platform (20+ services, 1.5B+ messages a day) to stabilize and scale it.</p>
+    </div>
   </div>
-  <ol class="timeline">
-    <li>
-      <div class="when"><span>Jul 2025 – present</span></div>
-      <div class="what">
-        <h3>Senior Software Engineer, Xstream backend</h3>
-        <ul>
-          <li>Designed and built Continue Watching, the event ingestion service, the IPTV session service and multi-CDN routing, and run them in production (case studies above).</li>
-          <li>Took over the UCLM campaign platform for Airtel India: 20+ services, 1.5B+ messages a day. Fixed build and load issues, wrote the deployment strategy, then stabilized and scaled it for the initial migration.</li>
-          <li>Led device management on Xstream: users see every device logged into their account and can log any out, so on a shared account that hits the concurrent-play limit they free a slot themselves instead of being locked out.</li>
-          <li>Drove partner onboarding for 3 partners (Fridaay, Amazon Prime, Hotstar), ingesting 10,944 titles; a reusable partner-integration guide and agent rules cut integration time from 2 weeks to 3 days.</li>
-          <li>Root-caused production out-of-memory incidents and Scylla failures in the sync service, and resolved Black Duck and Coverity findings in 20+ services by upgrading dependencies.</li>
-          <li>Built an AI operations assistant (Java 25, LangChain4j, Gemini on Vertex AI) that investigates missing titles and service errors across MongoDB, ELK and Prometheus, and runs PROD fixes only after confirmation.</li>
-        </ul>
-      </div>
-    </li>
-    <li>
-      <div class="when"><span>Oct 2023 – Jun 2025</span></div>
-      <div class="what">
-        <h3>Software Engineer, Xstream backend</h3>
-        <ul>
-          <li>Implemented most of the code for the AWS to GCP migration of 20+ Xstream services: SQS and Kinesis to Kafka, S3 to GCS, MongoDB and ScyllaDB workloads, with load-tested Kafka partitions and no downtime.</li>
-          <li>Built the IPTV multi-CDN rule engine, a Debezium and Kafka pipeline that cut content-enrichment delay from 1–2 days to near real time, and event-driven episode promotion.</li>
-          <li>Onboarded Amazon Prime playback and Hotstar ingestion, upgraded package and discovery services to Java 21 and Spring Boot 3.5, and traced hourly p99 spikes to log-file rollover.</li>
-          <li>Adapted Prebid Server on Vert.x with a Druid analytics pipeline, and built a Keycloak role-based onboarding module.</li>
-        </ul>
-      </div>
-    </li>
-  </ol>
+  <div class="role reveal">
+    <div class="role-meta"><p class="when">Oct 2023 – Jun 2025</p><p class="title">Software Engineer</p><p class="team">Xstream backend</p></div>
+    <div class="rail">
+      <div class="win"><span class="hl">20+</span><span class="tx">Migrated Xstream services from <b>AWS to GCP</b> with no downtime, and wrote most of the migration code.</span></div>
+      <div class="win"><span class="hl sm">1–2 days → near real time</span><span class="tx">Content-enrichment delay, cut with a <b>Debezium and Kafka</b> pipeline to data science.</span></div>
+      <div class="win"><span class="hl sm">Java 21</span><span class="tx">Upgraded the package and discovery services to <b>Java 21</b> and Spring Boot 3.5.</span></div>
+    </div>
+  </div>
 </section>
 
-<!-- HOW I WORK -->
-<section class="section wrap" aria-labelledby="how-title">
-  <div class="section-head">
-    <p class="label">How I work</p>
-    <h2 id="how-title">Three habits the case studies share</h2>
+<!-- PHILOSOPHY -->
+<section class="dark section" id="philosophy" aria-labelledby="phil-title" style="margin-top: 120px; padding: 96px 0 104px">
+  <div class="wrap">
+    <div class="opener light"><span class="lab">04 · Philosophy</span><span class="lab">Three habits the case studies share</span></div>
+    <h2 class="phil-h" id="phil-title">How I think about systems.</h2>
+    <div class="phil reveal">
+      <div><p class="roman" aria-hidden="true">I.</p><h3>Design for ordering</h3><p>Decide what must happen in order, then make the system enforce it, for example by keying Kafka messages by user.</p><p class="lab">Seen in · <a href="case/continue-watching.html">01</a> · <a href="case/iptv-session-service.html">04</a></p></div>
+      <div><p class="roman" aria-hidden="true">II.</p><h3>Isolate failure</h3><p>Give products, thread pools and zones their own boundaries, and keep a degraded path that still answers.</p><p class="lab">Seen in · <a href="case/event-ingestion.html">03</a> · <a href="case/resilient-home.html">05</a></p></div>
+      <div><p class="roman" aria-hidden="true">III.</p><h3>Measure before and after</h3><p>Pick the metric first, take the baseline, and check it again after rollout.</p><p class="lab">Seen in · all five</p></div>
+    </div>
   </div>
-  <ul class="cards3">
-    <li><h3>Design for ordering</h3><p>Decide what must happen in order and enforce it structurally, for example by keying Kafka messages by user, instead of hoping races stay rare.</p></li>
-    <li><h3>Isolate failure</h3><p>Give products, thread pools and storage zones their own boundaries so one fault stays small, and always keep a degraded path that still answers.</p></li>
-    <li><h3>Measure before and after</h3><p>Pick the metric first (p99, throughput, buffering, recovery), take the baseline, and check it again after rollout.</p></li>
-  </ul>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section wrap" aria-labelledby="skills-title">
-  <div class="section-head">
-    <p class="label">Skills</p>
-    <h2 id="skills-title">Tools I use in production</h2>
-  </div>
-  <dl class="skills">
-    <div><dt>Languages</dt><dd>Java (8, 11, 17, 21, 25), C++, SQL</dd></div>
-    <div><dt>Frameworks</dt><dd>Spring Boot, Spring WebFlux, Spring Cloud, Vert.x, Kafka Streams, gRPC</dd></div>
-    <div><dt>Data and messaging</dt><dd>Apache Kafka, Kafka Connect, ScyllaDB (Cassandra-compatible), Aerospike, Redis, MongoDB, PostgreSQL, Elasticsearch, Apache Druid, Google Pub/Sub</dd></div>
-    <div><dt>Cloud and infra</dt><dd>Google Cloud Platform (GCP), Amazon Web Services (AWS), Kubernetes, Docker, Jenkins, Envoy, Istio, Apache Airflow</dd></div>
-    <div><dt>Practices</dt><dd>Distributed systems, event-driven architecture, reliability and failover design, observability (Grafana, Kibana, AppDynamics), API design</dd></div>
+<section class="wrap section" id="skills" aria-labelledby="skills-title">
+  <div class="opener"><h2 class="lab" id="skills-title">05 · Skills</h2><span class="lab">Tools used in production, and where</span></div>
+  <dl style="margin-top: 28px; border-top: 0">
+    <div class="skill"><dt>Languages</dt><dd>Java (8, 11, 17, 21, 25) · SQL · C++</dd><dd class="seen">Seen in 01 – 05</dd></div>
+    <div class="skill"><dt>Services and APIs</dt><dd>Spring Boot · Spring WebFlux · Spring Cloud · Vert.x · gRPC</dd><dd class="seen">Seen in 01 · 05</dd></div>
+    <div class="skill"><dt>Data and messaging</dt><dd>Apache Kafka · Kafka Connect · ScyllaDB · Aerospike · Redis · MongoDB · PostgreSQL · Elasticsearch · Apache Druid · Google Pub/Sub</dd><dd class="seen">Seen in 01 · 02 · 03 · 04</dd></div>
+    <div class="skill"><dt>Cloud and delivery</dt><dd>Google Cloud Platform · Amazon Web Services · Kubernetes · Docker · Jenkins · Envoy · Apache Airflow</dd><dd class="seen">Seen in 03 · 05</dd></div>
+    <div class="skill"><dt>Reliability</dt><dd>Failover design · fallbacks and kill switches · Grafana · Kibana · AppDynamics</dd><dd class="seen">Seen in 02 · 03 · 05</dd></div>
   </dl>
 </section>
 
-<!-- SIDE PROJECTS -->
-<section class="section wrap" aria-labelledby="proj-title">
-  <div class="section-head">
-    <p class="label">Side projects</p>
-    <h2 id="proj-title">Tools I built for myself</h2>
-  </div>
-  <ul class="cards2">
-    <li>
-      <h3>Aerospike cluster workspace</h3>
-      <p>A web workspace for browsing namespaces and sets, searching and editing records, and checking cluster health, indexes and UDF modules. Long key-pattern operations run as background jobs with status polling and cancellation.</p>
-      <ul class="tags" aria-label="Technologies"><li>Java 21</li><li>Spring Boot</li><li>React</li><li>Vite</li></ul>
-    </li>
-    <li>
-      <h3>Reactive API gateway</h3>
-      <p>A gateway with MongoDB-backed dynamic routes, JWT authentication and authorization, custom filters, correlation IDs for tracing, admin APIs and Docker packaging.</p>
-      <ul class="tags" aria-label="Technologies"><li>Java 21</li><li>Spring Cloud Gateway</li><li>MongoDB</li><li>Docker</li></ul>
-    </li>
-  </ul>
-</section>
-
-<!-- EDUCATION -->
-<section class="section wrap" aria-labelledby="edu-title">
-  <div class="section-head">
-    <p class="label">Education</p>
-    <h2 id="edu-title">Malaviya National Institute of Technology, Jaipur</h2>
-    <p class="muted">B.Tech, Electronics and Communication Engineering · 2019 – 2023 · CGPA 8.16</p>
-  </div>
-</section>
-
 <!-- CONTACT -->
-<section id="contact" class="section wrap contact" aria-labelledby="contact-title">
-  <p class="label">Contact</p>
-  <h2 id="contact-title">Hiring for backend or platform engineering?</h2>
-  <p class="muted lead2">I would like to hear about teams where reliability, distributed systems and performance matter. Email is the fastest way to reach me.</p>
-  <div class="contact-row">
-    <a class="btn btn-primary" href="mailto:ramprasad.mnit@gmail.com">ramprasad.mnit@gmail.com</a>
-    <button id="copy-email" class="btn" type="button">Copy email</button>
-    <a class="btn" href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Download resume</a>
+<section class="contact section" id="contact" aria-labelledby="contact-title" style="margin-top: 120px; padding: 88px 0 96px">
+  <div class="wrap">
+    <p class="lab">06 · Contact</p>
+    <h2 id="contact-title">Hiring for backend or platform engineering? <em>Let us talk.</em></h2>
+    <a class="mail" href="mailto:ramprasad.mnit@gmail.com">ramprasad.mnit@gmail.com</a>
+    <p class="links"><a href="assets/Ram-Prasad-Bidiyasar-Resume.pdf" download>Download resume</a><a href="https://www.linkedin.com/in/ram-prasad-bidiyasar" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/RamPrasadBidiyasar" rel="noopener noreferrer">GitHub</a><a href="https://leetcode.com/u/Ram_Prasad_Bidiyasar/" rel="noopener noreferrer">LeetCode</a></p>
   </div>
-  <p id="copy-status" class="status-msg" role="status" aria-live="polite"></p>
 </section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap foot">
-    <p>© <span id="year">2026</span> Ram Prasad Bidiyasar</p>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/ram-prasad-bidiyasar" rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="https://github.com/RamPrasadBidiyasar" rel="noopener noreferrer">GitHub</a></li>
-      <li><a href="https://leetcode.com/u/Ram_Prasad_Bidiyasar/" rel="noopener noreferrer">LeetCode</a></li>
-      <li><a href="#top">Back to top</a></li>
-    </ul>
-  </div>
-</footer>
+<footer class="wrap footer"><span>© <span id="year">2026</span> Ram Prasad Bidiyasar</span><span class="mono" style="font-size: 12px">Set in Newsreader, Instrument Sans and IBM Plex Mono</span></footer>
 </body>
 </html>
