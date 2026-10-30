@@ -205,8 +205,8 @@
     <article class="pv pv-4 reveal">
       <p class="lab green">04 · Concurrency and atomic limits</p>
       <h3>IPTV Session Service</h3>
-      <p>One device at a time. Two logins at the same moment cannot both succeed.</p>
-      <svg class="only-wide" viewBox="0 0 380 190" role="img" aria-label="Conceptual illustration: two simultaneous logins reach a device-limit gate. One passes to a session; the other is rejected." style="width: 100%; height: auto">
+      <p>A device limit enforced with one atomic operation, so simultaneous logins cannot slip past it.</p>
+      <svg class="only-wide" viewBox="0 0 380 190" role="img" aria-label="Conceptual illustration: two simultaneous logins reach a device-limit gate. One passes to a session; the other triggers eviction of the oldest device or a rejection." style="width: 100%; height: auto">
         <defs><marker id="p4a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1F5A43"/></marker><marker id="p4b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#A8481A"/></marker></defs>
         <g fill="none" stroke-width="1.6"><path d="M90 46L148 82" stroke="#1F5A43" marker-end="url(#p4a)"/><path d="M90 144L148 108" stroke="#A8481A" stroke-dasharray="5 4" marker-end="url(#p4b)"/><path d="M212 95H266" stroke="#1F5A43" stroke-width="2.4" marker-end="url(#p4a)"/></g>
         <g font-family="Instrument Sans, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
@@ -215,7 +215,7 @@
           <rect x="150" y="62" width="62" height="66" fill="#1C1B19"/><text x="181" y="92" fill="#F7F3EA">atomic</text><text x="181" y="108" fill="#F7F3EA">limit</text>
           <rect x="268" y="76" width="100" height="38" fill="#E1ECE3" stroke="#1F5A43"/><text x="318" y="100" fill="#1F5A43">Session</text>
         </g>
-        <g font-family="IBM Plex Mono, monospace" font-size="10.5"><text x="0" y="14" fill="#5E5A52">same moment</text><text x="160" y="178" fill="#A8481A">rejected</text></g>
+        <g font-family="IBM Plex Mono, monospace" font-size="10.5"><text x="0" y="14" fill="#5E5A52">same moment</text><text x="96" y="178" fill="#A8481A">over the limit: evict oldest or reject</text></g>
       </svg>
       <div class="only-narrow"><p class="chips"><b>Login A</b><b>Login B</b>→<b class="q">atomic limit</b>→<b class="k">1 session</b></p></div>
       <div class="res"><div><span class="n">Atomic</span><span class="l">device limit</span></div><div><span class="n">Multi-zone</span><span class="l">Aerospike storage</span></div></div>
@@ -227,24 +227,24 @@
         <p class="lab green">05 · Fault isolation and fallback</p>
         <h3>Resilient Home</h3>
         <p>Keep the home screen open when something behind it breaks.</p>
-        <div class="res"><div><span class="n">~99%</span><span class="l">availability</span></div><div><span class="n">30 → 100</span><span class="l">TPS, page generation</span></div><div><span class="n">~30%</span><span class="l">lower latency</span></div></div>
+        <div class="res"><div><span class="n">~99%</span><span class="l">availability</span></div><div><span class="n">30 → 100</span><span class="l">TPS, page generation</span></div><div><span class="n">0%</span><span class="l">error screens, match day</span></div></div>
         <a class="pv-link" href="case/resilient-home.html">Read the case study<span aria-hidden="true">→</span></a>
       </div>
       <div class="pv-art">
-        <svg class="only-wide" viewBox="0 0 520 230" role="img" aria-label="Conceptual illustration: primary content is tried first, then a fallback retry, then static layouts. Separately, a slow dependency stays inside one of three isolated thread pools.">
+        <svg class="only-wide" viewBox="0 0 520 230" role="img" aria-label="Conceptual illustration: primary content is tried first, then a fallback retry, then a prepared page from the CDN. Separately, a slow dependency stays inside one of three isolated thread pools.">
           <defs><marker id="p5b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#A8481A"/></marker></defs>
           <g fill="none" stroke="#A8481A" stroke-width="1.6" stroke-dasharray="5 4"><path d="M130 62V92" marker-end="url(#p5b)"/><path d="M130 134V164" marker-end="url(#p5b)"/></g>
           <g font-family="Instrument Sans, sans-serif" font-size="12.5" font-weight="600" text-anchor="middle">
             <rect x="0" y="20" width="260" height="42" fill="#1F5A43"/><text x="130" y="46" fill="#FFFFFF">1 · Primary content</text>
             <rect x="0" y="92" width="260" height="42" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="4 3"/><text x="130" y="118" fill="#7A3512">2 · Fallback retry (kill switch)</text>
-            <rect x="0" y="164" width="260" height="42" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="1.5 3"/><text x="130" y="190" fill="#7A3512">3 · Static layouts</text>
+            <rect x="0" y="164" width="260" height="42" fill="#F6E4D6" stroke="#A8481A" stroke-dasharray="1.5 3"/><text x="130" y="190" fill="#7A3512">3 · CDN prepared page</text>
           </g>
-          <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#A8481A"><text x="140" y="82">fetch fails</text><text x="140" y="154">CDN fails</text></g>
+          <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#A8481A"><text x="140" y="82">fetch fails</text><text x="140" y="154">slow or 5xx</text></g>
           <rect x="318" y="62" width="58" height="96" fill="#FFFFFF" stroke="#1F5A43"/><rect x="382" y="62" width="58" height="96" fill="#F6E4D6" stroke="#A8481A"/><rect x="446" y="62" width="58" height="96" fill="#FFFFFF" stroke="#1F5A43"/>
           <g font-family="IBM Plex Mono, monospace" font-size="10.5" text-anchor="middle" fill="#1C1B19"><text x="347" y="114">pool A</text><text x="411" y="114" fill="#7A3512">pool B</text><text x="475" y="114">pool C</text><text x="411" y="132" fill="#A8481A">slow</text></g>
           <text x="318" y="190" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#3F4A43">a slow call stays in its pool</text>
         </svg>
-        <div class="only-narrow tiers"><span style="background: var(--forest); color: #fff">1 · Primary content</span><span style="background: var(--ember-tint); border: 1px dashed var(--ember); color: var(--ember-ink)">2 · Fallback retry</span><span style="background: var(--ember-tint); border: 1px dotted var(--ember); color: var(--ember-ink)">3 · Static layouts</span></div>
+        <div class="only-narrow tiers"><span style="background: var(--forest); color: #fff">1 · Primary content</span><span style="background: var(--ember-tint); border: 1px dashed var(--ember); color: var(--ember-ink)">2 · Fallback retry</span><span style="background: var(--ember-tint); border: 1px dotted var(--ember); color: var(--ember-ink)">3 · CDN prepared page</span></div>
       </div>
     </article>
   </div>
