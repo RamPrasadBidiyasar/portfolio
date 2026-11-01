@@ -216,6 +216,40 @@ b, strong { font-weight: 600; }
 .chips .f { background: var(--warn-tint); color: var(--warn-ink); border: 1px dashed var(--warn); }
 .chips .q { background: var(--ink); color: var(--on-dark); }
 
+/* Phone mini-diagrams for the selected-work cards (the wide SVGs are hidden below 720px). */
+.m-flow { display: flex; flex-direction: column; gap: 22px; }
+.m-flow li { position: relative; display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border: 1px solid var(--ink); background: var(--bg); color: var(--ink); }
+.m-flow li + li::before { content: ""; position: absolute; left: 50%; top: -22px; width: 1.5px; height: 16px; background: var(--accent); }
+.m-flow li + li::after { content: ""; position: absolute; left: calc(50% - 4px); top: -9px; border: 4px solid transparent; border-top: 5px solid var(--accent); }
+.m-flow b { font-size: 15px; font-weight: 600; }
+.m-flow small { font: 400 12px/1.45 var(--mono); color: var(--muted); }
+.m-flow .q { background: var(--ink); border-color: var(--ink); color: var(--on-dark); }
+.m-flow .q small { color: var(--on-dark-2); }
+.m-flow .k { background: var(--accent); border-color: var(--accent); color: var(--on-dark); }
+.m-flow .k small { color: #DDEBE2; }
+.m-flow .f { background: var(--warn-tint); border: 1px dashed var(--warn); color: var(--warn-ink); }
+.m-flow .f small { color: var(--warn-ink); }
+.m-flow .f::before { background: var(--warn) !important; }
+.m-flow .f::after { border-top-color: var(--warn) !important; }
+.m-flow .branch { margin-left: 24px; }
+.m-flow .branch::before { left: 12px; }
+.m-flow .branch::after { left: 8px; }
+.m-bars { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.m-bars p { display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: center; gap: 4px 10px; }
+.m-bars span { font: 400 12px/1 var(--mono); color: var(--on-dark-2); }
+.m-bars i { display: block; height: 14px; background: var(--on-dark-2); }
+.m-bars i.hi { background: var(--accent-light); }
+.m-bars em { grid-column: 2; font: normal 400 12px/1.4 var(--mono); color: var(--on-dark); }
+.work--dark .m-flow li { background: transparent; border-color: var(--on-dark-2); color: var(--on-dark); }
+.work--dark .m-flow small { color: var(--on-dark-2); }
+.work--dark .m-flow .k { background: var(--accent); border-color: var(--accent-light); }
+.work--dark .m-flow .k small { color: #DDEBE2; }
+.work--dark .m-flow .f { background: #3A2618; border-color: #E0905F; color: #F6E4D6; }
+.work--dark .m-flow .f small { color: #F6C9A8; }
+.work--dark .work-art .label, .work--dark .work-kicker .label { color: var(--on-dark-2); }
+.work--dark .m-flow li + li::before { background: var(--accent-light); }
+.work--dark .m-flow li + li::after { border-top-color: var(--accent-light); }
+
 /* ---------- 11. Principles strip ---------- */
 .principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-6); margin-top: var(--s-8); padding-top: var(--s-6); border-top: 1px solid var(--line); }
 .principle h3 { display: flex; gap: var(--s-3); align-items: baseline; font-size: 26px; letter-spacing: -0.02em; }
@@ -496,13 +530,16 @@ html.js .reveal.in { opacity: 1; transform: none; }
   .cs-sec > header .label { margin-left: 0; flex-basis: 100%; }
   .fig-box.wide-only { display: none; }
   .only-tall { display: block; }
-  .fig-box.only-tall { padding: 12px; }
+  .fig-box.only-tall { padding: 8px; }
   .walk { grid-template-columns: 1fr; }
   .spec { grid-template-columns: 1fr; }
   .spec > div:nth-child(even) { padding-left: 0; border-left: 0; }
   .decision { grid-template-columns: 1fr; }
   .problem-p { font-size: 17px; }
   .next-case a { grid-template-columns: 1fr; padding-top: var(--s-7); padding-bottom: var(--s-7); }
+}
+@media (max-width: 720px) {
+  html.js .reveal { opacity: 1; transform: none; transition: none; }
 }
 @media (max-width: 360px) {
   :root { --pad: 16px; }
