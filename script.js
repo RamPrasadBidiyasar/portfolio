@@ -27,6 +27,13 @@
     const targets = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
     if (!hasIO || !targets.length) return;
     const io = new IntersectionObserver(entries => {
+      if (selector === '.nav-links a[href^="#"]' && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+        links.forEach(l => {
+          if (l.hash === '#contact') l.setAttribute('aria-current', 'true');
+          else l.removeAttribute('aria-current');
+        });
+        return;
+      }
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
         links.forEach(l => {
@@ -39,6 +46,20 @@
   };
   spy('.nav-links a[href^="#"]', '-30% 0px -60% 0px');
   spy('.cs-toc a[href^="#"]', '-20% 0px -70% 0px');
+
+  /* At the bottom of the page the contact band sits below the spy strip, so mark Contact directly. */
+  const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const contactLink = navLinks.find(a => a.hash === '#contact');
+  if (contactLink) {
+    const markBottom = () => {
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      if (!atBottom) return;
+      navLinks.forEach(l => l.removeAttribute('aria-current'));
+      contactLink.setAttribute('aria-current', 'true');
+    };
+    markBottom();
+    window.addEventListener('scroll', markBottom, { passive: true });
+  }
 
   /* Diagram steps: hovering or focusing a step number or walkthrough line highlights its pair. */
   const setStep = (n, on) => {
@@ -101,4 +122,40 @@
       io.observe(box);
     });
   }
+
+  /* Proof numbers count once. The printed value stays if motion is reduced or JS bails. */
+  const countTo = (el, to, prefix, suffix, ms) => {
+    const t0 = performance.now();
+    const step = (now) => {
+      const p = Math.min(1, (now - t0) / ms);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = prefix + Math.round(to * eased) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const proof = document.querySelector('.proof');
+  if (proof && !reduce) {
+    const play = () => {
+      if (proof.dataset.played) return;
+      proof.dataset.played = '1';
+      proof.classList.add('is-in');
+      proof.querySelectorAll('[data-count]').forEach(el => {
+        countTo(el, Number(el.dataset.count), el.dataset.prefix || '', el.dataset.suffix || '', 720);
+      });
+    };
+    if (hasIO) {
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          play();
+          obs.disconnect();
+        });
+      }, { threshold: 0.5 });
+      io.observe(proof);
+    } else {
+      play();
+    }
+  }
+
 })();
