@@ -21,7 +21,7 @@ Run `python3 -m http.server 8000` in this directory, then open http://localhost:
 
 ## Structure
 
-- `index.html`: home page. The first screen is the hiring snapshot (role, four production numbers, core stack). Below that: selected work (six case studies), experience, full stack, personal projects, education and contact.
+- `index.html`: home page. The first screen is a snapshot (role, four production numbers, core stack). Below that: selected work (six case studies), experience, full stack, personal projects, education and contact.
 - `case/*.html`: one page per case study. Each has a numbered architecture diagram (a horizontal version and a vertical phone version, both inline SVG), a walkthrough, the problem, decisions and trade-offs, failure handling and results.
 - `styles.css`: design tokens and components for "The Engineering Journal" (ivory, charcoal, forest green, ember orange only for failure paths; Newsreader, Instrument Sans, IBM Plex Mono). Case pages follow a seven-part structure: context, architecture, flow, implementation, trade-offs, failure handling, results.
 - `script.js`: phone menu, section highlight, one-time scroll reveal, diagram step highlighting. Everything is visible without JavaScript.
