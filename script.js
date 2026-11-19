@@ -2,6 +2,25 @@
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const hasIO = 'IntersectionObserver' in window;
 
+  /* Visit stats (GoatCounter): page views come from count.js; this records clicks on resume and contact links. */
+  const clickName = a => {
+    const href = a.getAttribute('href') || '';
+    if (href.endsWith('.pdf')) return 'resume-download';
+    if (href.startsWith('mailto:')) return 'email';
+    if (href.startsWith('tel:')) return 'phone';
+    if (href.includes('linkedin.com')) return 'linkedin';
+    if (href.includes('leetcode.com')) return 'leetcode';
+    if (href.includes('github.com')) return 'github' + (href.replace(/\/$/, '').split('/').length > 4 ? '-' + href.split('/').pop() : '');
+    return null;
+  };
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[href]');
+    const name = a && clickName(a);
+    if (!name || !window.goatcounter || !window.goatcounter.count) return;
+    const where = location.pathname.split('/').pop().replace('.html', '') || 'home';
+    window.goatcounter.count({ path: `click-${name}`, title: `${name} (from ${where})`, event: true });
+  });
+
   const year = document.querySelector('#year');
   if (year) year.textContent = new Date().getFullYear();
 
