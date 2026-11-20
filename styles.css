@@ -655,3 +655,6 @@ html.js .proof.is-in .proof-cell:nth-child(4) { animation-delay: 0.21s; }
 @media (prefers-reduced-motion: reduce) {
   .live-dot, .proof-cell, .roster-go { animation: none !important; }
 }
+
+/* Contact buttons: every link carries a small logo next to its label. */
+.ico { flex: none; width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
